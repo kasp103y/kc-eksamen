@@ -1,0 +1,94 @@
+:root {
+  /*************** Colors ******************/
+  --main-color: #000;
+  --secondary-color: #bada55;
+  --bg-color: #fff;
+  --font-color: #000;
+  --font-color-white: #fff;
+
+  /*************** Font sizes ******************/
+
+  --font-size-sm: clamp(0.8rem, -0.09vw + 0.82rem, 0.75rem);
+  --font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+  --font-size-md: clamp(1.25rem, 0.15vw + 1.21rem, 1.33rem);
+  --font-size-lg: clamp(1.56rem, 0.39vw + 1.47rem, 1.78rem);
+  --font-size-xl: clamp(1.95rem, 0.76vw + 1.76rem, 2.37rem);
+  --font-size-xxl: clamp(2.44rem, 1.3vw + 2.12rem, 3.16rem);
+  --font-size-xxxl: clamp(3.05rem, 2.1vw + 2.53rem, 4.21rem);
+  --font-size-xxxxl: clamp(3.81rem, 3.26vw + 3rem, 5.61rem);
+
+  /*************** Borders ******************/
+  --border-thin: 2px solid #000;
+  --border-thick: 4px solid #000;
+
+  /*************** spacing ******************/
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+  --spacing-7: 40px;
+  --spacing-8: 52px;
+
+  --spacing-full-width: 100vw;
+  --spacing-full-height: 100vh;
+
+  /*************** Borders ******************/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/****************************************************************** General styling **********************************************************************/
+
+/*** Text styles ***/
+
+.display-heading {
+  font-size: var(--font-size-xxxxl);
+}
+
+.main-title {
+  font-size: var(--font-size-xxxl);
+}
+
+.second-title {
+  font-size: var(--font-size-xxl);
+}
+
+.third-title {
+  font-size: var(--font-size-xl);
+}
+
+.fourth-title {
+  font-size: var(--font-size-lg);
+}
+
+.fifth-title {
+  font-size: var(--font-size-md);
+}
+
+.lead {
+  font-size: var(--font-size-md);
+}
+
+.paragrapgh {
+  font-size: var(--font-size-base);
+}
+
+.detail {
+  font-size: var(--font-size-sm);
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: var(--font-size-base);
+}
+
+.a-white {
+  color: var(--font-color-white);
+}
