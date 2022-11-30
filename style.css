@@ -20,8 +20,8 @@
   --font-size-xxxxl: clamp(3.81rem, 3.26vw + 3rem, 5.61rem);
 
   /*************** Borders ******************/
-  --border-thin-black: 2px solid black;
-  --border-thick-black: 4px solid var(var(--font-color));
+  --border-thin-black: 1px solid black;
+  --border-thick-black: 2px solid black;
 
   /*************** spacing ******************/
   --spacing-1: 4px;
@@ -43,6 +43,41 @@
   --easing: ease 300ms;
   --easing-transform: transform ease 300ms;
 }
+
+/* IvyPresto Headline Light
+
+font-family: ivypresto-headline, serif;
+
+font-weight: 300;
+
+font-style: normal;
+
+
+IvyPresto Headline Regular
+
+font-family: ivypresto-headline, serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+IvyPresto Headline SemiBold
+
+font-family: ivypresto-headline, serif;
+
+font-weight: 600;
+
+font-style: normal;
+
+
+IvyPresto Headline Bold
+
+font-family: ivypresto-headline, serif;
+
+font-weight: 700;
+
+font-style: normal; */
 
 * {
   box-sizing: border-box;
@@ -81,8 +116,9 @@ nav {
 
 .second-title {
   font-size: var(--font-size-xxl);
-  font-family: "Tinos", serif;
+  font-family: ivypresto-headline, serif;
   font-weight: 400;
+  font-style: normal;
 }
 
 .third-title {
@@ -102,7 +138,9 @@ nav {
 
 .lead {
   font-size: var(--font-size-md);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .xl-paragrapgh {
@@ -117,7 +155,18 @@ nav {
 
 .detail {
   font-size: var(--font-size-sm);
+  font-family: "neue-haas-grotesk-text", sans-serif;
+}
+
+.link-title {
+  font-size: var(--font-size-md);
   font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.btn-text {
+  font-size: var(--font-size-base);
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
 }
 
 a {
@@ -137,6 +186,7 @@ a {
 .inline-margin {
   margin: var(--spacing-8);
 }
+
 /****************************************************************** Mobile & general *************************************************************************/
 
 /*Navigation & burger*/
@@ -144,7 +194,6 @@ a {
 header nav {
   display: flex;
   justify-content: space-between;
-  padding-inline: var(--spacing-4);
   padding-block: var(--spacing-4);
   align-items: center;
   grid-column-start: 2;
@@ -164,12 +213,12 @@ header {
 
 .menu {
   gap: var(--spacing-5);
-  color: var(--font-color-white);
+  color: var(--font-color);
   display: none;
 }
 
 .menu-item a {
-  color: var(--font-color-white);
+  color: var(--font-color);
   mix-blend-mode: difference;
 }
 
@@ -190,7 +239,7 @@ header {
 
 .burger-icon:hover .bar,
 .burger-icon.close-icon .bar {
-  margin-block: -2px;
+  margin-block: -1px;
 }
 
 .burger.open {
@@ -209,7 +258,7 @@ header {
 .burger-icon .bar {
   height: 2px;
   width: 40px;
-  background-color: var(--bg-color);
+  background-color: var(--main-color);
   margin-block: var(--spacing-3);
 }
 
@@ -217,7 +266,7 @@ header {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background-color: var(--font-color);
+  background-color: var(--bg-color);
   top: 0%;
   left: 100%;
   z-index: 100;
@@ -226,8 +275,8 @@ header {
 }
 
 .logo svg path {
-  fill: var(--bg-color);
-  color: var(--bg-color);
+  fill: var(--main-color);
+  color: var(--main-color);
 }
 
 .logo {
@@ -237,13 +286,55 @@ header {
 
 /* !navigation */
 
+/* Buttons */
+
+.btn-primary {
+  border: var(--border-thick-black);
+  padding-block: var(--spacing-3);
+  padding-inline: var(--spacing-6);
+  border-radius: 999px;
+  display: inline-flex;
+}
+
+/*Buttons over */
+
 /*Hero section */
 
 .hero-wrapper {
-  background-color: var(--main-color);
+  background-color: var(--bg-color);
 }
 
 /*Hero section over & out >_>*/
+
+/*Udstillinger component */
+
+.udstilling-link {
+  border-block: var(--border-thin-black);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-block: var(--spacing-3);
+  margin-block: -1px;
+}
+
+.udstilling-list .btn-primary {
+  align-self: flex-start;
+}
+
+.udstilling-dates {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.udstilling-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-8);
+}
+
+/*Udstillinger component over ***/
 
 /*Event module */
 
@@ -262,7 +353,7 @@ header {
   border-bottom: var(--border-thin-black);
   padding-block: var(--spacing-4);
   align-items: center;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   transition: var(--easing);
 }
 
@@ -283,6 +374,10 @@ header {
 
 @media screen and (min-width: 768px) {
   /* Tablet styling goes here  */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 5% 1fr 10%;
+  }
 }
 
 /****************************************************************** Desktop ************************************************************************/
@@ -298,7 +393,6 @@ header {
   .menu-item a {
     display: inline-block;
     position: relative;
-    color: var(--font-color-white);
     padding-block: var(--spacing-2);
   }
 
@@ -312,7 +406,7 @@ header {
 
   .main-grid {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 10% 1fr 10%;
   }
 
   .main-wrapper {
@@ -369,6 +463,38 @@ header {
     grid-row-start: 5;
     grid-row-end: 7;
   }
+
+  /***Udstillings component ******/
+
+  .udstilling-component {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-9);
+    margin-block: var(--spacing-10);
+  }
+
+  .udstilling-img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    width: 400px;
+  }
+
+  .udstilling-img figcaption:first-child {
+    text-align: start;
+    margin-bottom: var(--spacing-3);
+  }
+  .udstilling-img figcaption:last-child {
+    text-align: end;
+    margin-top: var(--spacing-3);
+  }
+
+  .udstilling-list {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  /***Udstillings slut ******/
 }
 
 /****************************************************************** Hovers *************************************************************************/
@@ -384,7 +510,7 @@ header {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--font-color-white);
+    background-color: var(--font-color);
     transform-origin: bottom right;
     transition: var(--easing-transform);
   }
