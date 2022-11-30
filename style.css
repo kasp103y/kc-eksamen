@@ -18,8 +18,8 @@
   --font-size-xxxxl: clamp(3.81rem, 3.26vw + 3rem, 5.61rem);
 
   /*************** Borders ******************/
-  --border-thin: 2px solid #000;
-  --border-thick: 4px solid #000;
+  --border-thin-black: 2px solid black;
+  --border-thick-black: 4px solid var(var(--font-color));
 
   /*************** spacing ******************/
   --spacing-1: 4px;
@@ -30,11 +30,16 @@
   --spacing-6: 32px;
   --spacing-7: 40px;
   --spacing-8: 52px;
+  --spacing-9: 100px;
+  --spacing-10: 140px;
 
   --spacing-full-width: 100vw;
   --spacing-full-height: 100vh;
 
-  /*************** Borders ******************/
+  /*************** Transitions ******************/
+
+  --easing: ease 300ms;
+  --easing-transform: transform ease 300ms;
 }
 
 * {
@@ -43,52 +48,349 @@
   padding: 0;
 }
 
+img {
+  height: auto;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav {
+  overflow: hidden;
+}
+
 /****************************************************************** General styling **********************************************************************/
 
 /*** Text styles ***/
 
 .display-heading {
   font-size: var(--font-size-xxxxl);
+  font-family: "Tinos", serif;
+  font-weight: 400;
 }
 
 .main-title {
   font-size: var(--font-size-xxxl);
+  font-family: "Tinos", serif;
+  font-weight: 400;
 }
 
 .second-title {
   font-size: var(--font-size-xxl);
+  font-family: "Tinos", serif;
+  font-weight: 400;
 }
 
 .third-title {
   font-size: var(--font-size-xl);
+  font-family: "Tinos", serif;
 }
 
 .fourth-title {
   font-size: var(--font-size-lg);
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .fifth-title {
   font-size: var(--font-size-md);
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .lead {
   font-size: var(--font-size-md);
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.xl-paragrapgh {
+  font-size: var(--font-size-xl);
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .paragrapgh {
   font-size: var(--font-size-base);
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .detail {
   font-size: var(--font-size-sm);
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: var(--font-color);
   font-size: var(--font-size-base);
+  color: var(--font-color);
 }
 
-.a-white {
+.black {
+  color: var(--font-color);
+}
+
+.white {
   color: var(--font-color-white);
 }
+
+.inline-margin {
+  margin: var(--spacing-8);
+}
+/****************************************************************** Mobile & general *************************************************************************/
+
+/*Navigation & burger*/
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: var(--spacing-4);
+  padding-block: var(--spacing-4);
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: var(--spacing-10);
+  align-items: center;
+}
+
+.menu {
+  gap: var(--spacing-5);
+  color: var(--font-color-white);
+  display: none;
+}
+
+.menu-item a {
+  color: var(--font-color-white);
+  mix-blend-mode: difference;
+}
+
+.burger-icon {
+  border: none;
+  background-color: transparent;
+  height: 80px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 200;
+  transition: var(--easing);
+}
+
+.bar {
+  transition: var(--easing);
+}
+
+.burger-icon:hover .bar,
+.burger-icon.close-icon .bar {
+  margin-block: -2px;
+}
+
+.burger.open {
+  top: 0%;
+  left: 0%;
+}
+
+.burger-icon.close-icon {
+  transform: rotate(45deg);
+}
+
+.burger-icon.close-icon .bar:last-child {
+  transform: rotate(90deg);
+}
+
+.burger-icon .bar {
+  height: 2px;
+  width: 40px;
+  background-color: var(--bg-color);
+  margin-block: var(--spacing-3);
+}
+
+.burger {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: var(--font-color);
+  top: 0%;
+  left: 100%;
+  z-index: 100;
+  transition: var(--easing);
+  z-index: 20;
+}
+
+.logo svg path {
+  fill: var(--bg-color);
+  color: var(--bg-color);
+}
+
+.logo {
+  position: relative;
+  z-index: 200;
+}
+
+/* !navigation */
+
+/*Hero section */
+
+.hero-wrapper {
+  background-color: var(--main-color);
+}
+
+/*Hero section over & out >_>*/
+
+/*Event module */
+
+.event-wrapper {
+  margin-block: var(--spacing-8);
+}
+
+.event-wrapper .second-title {
+  margin-block: var(--spacing-8);
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  border-top: var(--border-thin-black);
+  border-bottom: var(--border-thin-black);
+  padding-block: var(--spacing-4);
+  align-items: center;
+  margin-bottom: -2px;
+  transition: var(--easing);
+}
+
+.event > div {
+  display: flex;
+  justify-content: space-between;
+  min-width: 40%;
+  align-items: center;
+}
+
+.event:hover ~ .event {
+  opacity: 0.3;
+}
+
+/*Event module out */
+
+/****************************************************************** Tablet *************************************************************************/
+
+@media screen and (min-width: 768px) {
+  /* Tablet styling goes here  */
+}
+
+/****************************************************************** Desktop ************************************************************************/
+
+@media screen and (min-width: 1000px) {
+  /* Desktop styling goes here  */
+
+  /*NAV*/
+  .menu {
+    display: flex;
+  }
+
+  .menu-item a {
+    display: inline-block;
+    position: relative;
+    color: var(--font-color-white);
+    padding-block: var(--spacing-2);
+  }
+
+  /*GRIDS*/
+
+  .tw-col-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+  }
+
+  .main-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  /*HERO*/
+
+  .hero-section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    min-height: 80vh;
+    max-height: 100vh;
+    display: grid;
+    align-items: center;
+
+    gap: var(--spacing-4);
+  }
+
+  .hero-section .hero-heading {
+    max-width: 1000px;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    justify-self: center;
+  }
+
+  .hero-section > .hero-img:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .hero-section > .hero-img:nth-child(2) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 9;
+  }
+
+  .hero-section > .hero-img:nth-child(3) {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .hero-section > .hero-img:nth-child(4) {
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 7;
+  }
+}
+
+/****************************************************************** Hovers *************************************************************************/
+
+@media screen and (min-width: 1000px) {
+  /* Desktop styling goes here  */
+
+  .menu-item a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--font-color-white);
+    transform-origin: bottom right;
+    transition: var(--easing-transform);
+  }
+
+  .menu-item a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+/****************************************************************** Animations *********************************************************************/
