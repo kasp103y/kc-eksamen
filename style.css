@@ -22,7 +22,8 @@
   /*************** Borders ******************/
   --border-thin-black: 1px solid black;
   --border-thick-black: 2px solid black;
-
+  --border-thick-white: 2px solid #fff;
+  --border-thin-white: 1px solid #fff;
   /*************** spacing ******************/
   --spacing-1: 4px;
   --spacing-2: 8px;
@@ -102,14 +103,20 @@ body {
   background-color: var(--bg-color);
 }
 
+.padding-block {
+  padding-block: var(--spacing-10);
+}
+
 /****************************************************************** General styling **********************************************************************/
 
 /*** Text styles ***/
 
 .display-heading {
   font-size: var(--font-size-xxxxl);
-  font-family: "Tinos", serif;
-  font-weight: 400;
+  font-family: ivypresto-headline, serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 120%;
 }
 
 .main-title {
@@ -173,6 +180,13 @@ body {
   font-weight: 500;
 }
 
+.h1-span {
+  font-size: var(--font-size-base);
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  vertical-align: text-top;
+}
+
 a {
   text-decoration: none;
   font-size: var(--font-size-base);
@@ -187,19 +201,32 @@ a {
   color: var(--font-color-white);
 }
 
+.center {
+  text-align: center;
+}
+
 .inline-margin {
   margin: var(--spacing-8);
 }
 
 /****************************************************************** Mobile & general *************************************************************************/
 
+.main-grid {
+  padding-inline: var(--spacing-3);
+}
+.main-grid.black {
+  background-color: var(--font-color);
+}
 /*Navigation & burger*/
 
 #circle {
-  width: 80px;
-  height: 80px;
+  width: 104px;
+  height: 104px;
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
 
+  align-items: center;
   background-color: #000;
   position: absolute;
   top: -1000px;
@@ -308,6 +335,15 @@ header {
 
 /* Buttons */
 
+.btn-secondary {
+  border: var(--border-thick-black);
+  padding-block: var(--spacing-3);
+  padding-inline: var(--spacing-6);
+  border-radius: 999px;
+  display: inline-flex;
+  transition: var(--easing);
+}
+
 .btn-primary {
   border: var(--border-thick-black);
   padding-block: var(--spacing-3);
@@ -315,6 +351,14 @@ header {
   border-radius: 999px;
   display: inline-flex;
   transition: var(--easing);
+  color: var(--btn-color-secondary);
+  background-color: var(--btn-color-primary);
+}
+
+.btn-secondary.white {
+  border: var(--border-thick-white);
+  color: var(--btn-color-secondary);
+  background-color: var(--btn-color-primary);
 }
 
 /*Buttons over */
@@ -353,16 +397,9 @@ header {
   align-items: center;
 }
 
-.udstilling-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--spacing-8);
-}
-
 /*Udstillinger component over ***/
 
-/*Event module */
+/*Event frontapge mobil module */
 
 .event-wrapper {
   margin-block: var(--spacing-8);
@@ -406,6 +443,31 @@ header {
 }
 
 /*Event module out */
+
+/*Om sektion frontpage mobil */
+
+.about-p > * {
+  margin-bottom: var(--spacing-8);
+}
+
+.about-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-p a {
+  align-self: center;
+}
+
+.about-image {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  max-width: 70vw;
+}
+
+/*Om sektion frontpage mobil done */
 
 /****************************************************************** Tablet *************************************************************************/
 
@@ -451,13 +513,64 @@ header {
     grid-column-end: 3;
   }
 
+  .udstilling-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-8);
+  }
+
+  .udstillinger-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    gap: var(--spacing-4);
+  }
+
+  .udstilling-grid,
+  .udstilling-grid img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .udstilling-grid:first-child {
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+  .udstilling-grid:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+  .udstilling-grid:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 7;
+  }
+  .udstilling-grid:nth-child(4) {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 10;
+  }
+  .udstilling-grid:last-child {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 11;
+  }
+
   /*HERO*/
 
   .hero-section {
     grid-column-start: 2;
     grid-column-end: 3;
     min-height: 80vh;
-    max-height: 100vh;
+
     display: grid;
     align-items: center;
 
@@ -465,40 +578,34 @@ header {
   }
 
   .hero-section .hero-heading {
-    max-width: 1000px;
     grid-column-start: 1;
-    grid-column-end: 12;
-    grid-row-start: 5;
-    grid-row-end: 8;
-    justify-self: center;
-  }
-
-  .hero-section > .hero-img:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6;
-  }
-
-  .hero-section > .hero-img:nth-child(2) {
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 7;
-    grid-row-end: 9;
-  }
-
-  .hero-section > .hero-img:nth-child(3) {
-    grid-column-start: 7;
     grid-column-end: 9;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 4;
   }
 
-  .hero-section > .hero-img:nth-child(4) {
-    grid-column-start: 10;
+  .hero-section .hero-intro {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    align-self: flex-start;
+  }
+
+  .tw-col-grid .udstillinger-grid {
+    grid-column-start: 8;
     grid-column-end: 13;
-    grid-row-start: 5;
-    grid-row-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 10;
+  }
+
+  .hero-intro .paragrapgh {
+    margin-block: var(--spacing-6);
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: var(--spacing-4);
   }
 
   /***Udstillings component ******/
@@ -560,6 +667,13 @@ header {
   .btn-primary:hover {
     background-color: var(--btn-color-primary);
     color: var(--btn-color-secondary);
+    transform: translateY(-12px);
+  }
+  .btn-secondary:hover {
+    background-color: var(--btn-color-secondary);
+    color: var(--btn-color-secondary);
+    transform: translateY(-12px);
+    color: var(--btn-color-primary);
   }
 
   .events:hover > .event {

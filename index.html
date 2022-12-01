@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="https://use.typekit.net/qoo2kea.css" />
     <link rel="stylesheet" href="style.css" />
-
+    <script src="gsap.js"></script>
     <script src="script.js" defer></script>
     <title>KUNSTHAL CHARLOTTENBORG | fed titel</title>
   </head>
@@ -63,41 +63,62 @@
         </section>
       </nav>
     </header>
-    <main role="main">
-      <div id="circle"></div>
+    <main role="main" style="background-color: white">
+      <div id="circle"><p class="lead white">LÆS MERE</p></div>
       <section class="hero-wrapper main-grid">
         <section class="hero-section tw-col-grid">
-          <!--  <figure class="hero-img">
-            <img
-              src="billeder/placeholder.jpg"
-              alt="Alternative text"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="hero-img">
-            <img
-              src="billeder/placeholder.jpg"
-              alt="Alternative text"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="hero-img">
-            <img
-              src="billeder/placeholder.jpg"
-              alt="Alternative text"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="hero-img">
-            <img
-              src="billeder/placeholder.jpg"
-              alt="Alternative text"
-              loading="lazy"
-            />
-          </figure> -->
           <h1 class="display-heading hero-heading">
-            KUNSTHAL <span class="inline-margin">CHARLOTTENBORG</span>
+            <span class="h1-span">OPLEV</span> KUNSTHAL CHARLOTTENBORG
           </h1>
+          <article class="hero-intro">
+            <p class="paragrapgh">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              suscipit ea? Suscipit ea modi perferendis fugiat accusamus ullam
+              autem necessitatibus, voluptatibus nihil laborum tempora! Dolores
+              dolorum temporibus recusandae illum unde!
+            </p>
+            <setion class="hero-btns"
+              ><a href="#" class="btn-primary">Køb Entrébillet</a>
+              <a href="#" class="btn-secondary">Se Udstillinger</a></setion
+            >
+          </article>
+          <section class="udstillinger-grid">
+            <figure class="udstilling-grid">
+              <img
+                src="billeder/eye.jpg"
+                alt="Et bøljet øje fra udstillingen Post Capital"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="udstilling-grid square">
+              <img
+                src="billeder/post-cap-2.jpg"
+                alt="Billede fra Post Capitals"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="udstilling-grid">
+              <img
+                src="billeder/beardy.jpg"
+                alt="Billede fra Post Capitals"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="udstilling-grid">
+              <img
+                src="billeder/mural.jpg"
+                alt="Mur med maling"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="udstilling-grid square">
+              <img
+                src="billeder/cao-fei-2.jpg"
+                alt="Billede fra Post Capitals"
+                loading="lazy"
+              />
+            </figure>
+          </section>
         </section>
       </section>
       <section class="main-content main-grid">
@@ -402,7 +423,35 @@
           </section>
         </section>
       </section>
+      <section class="main-content main-grid black padding-block">
+        <section class="main-wrapper">
+          <section class="about-section">
+            <article class="about-p">
+              <h2 class="second-title white center">
+                Kunsthallen præsenterer et ambitiøst udstillingsprogram med
+                internationalt udsyn, der omfatter kunst af såvel talenter som
+                etablerede stjerner fra både ind- og udland.
+              </h2>
+              <a href="#" class="btn-secondary white">Læs mere om os</a>
+            </article>
+          </section>
+        </section>
+        <section class="about-image" aria-label="Kunsthal Charlottenborg">
+          <figure>
+            <img src="billeder/kunsthal.jpg" alt="#" loading="lazy" />
+            <figcaption
+              class="white paragraph"
+              aria-labelledby="Kunsthal Charlottenborg"
+            >
+              Kunsthal Charlottenborg
+            </figcaption>
+          </figure>
+        </section>
+      </section>
     </main>
     <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
   </body>
 </html>

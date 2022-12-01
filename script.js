@@ -15,7 +15,7 @@ function burgerOnClick() {
   burgerMenu.classList.toggle("open");
   burgerIcon.classList.toggle("close-icon");
 }
-
+/* 
 function hoverDiv() {
   circle.style.visibility = "visible";
   const onMouseMove = (e) => {
@@ -24,7 +24,18 @@ function hoverDiv() {
   };
 
   document.addEventListener("mousemove", onMouseMove);
+} */
+
+function hoverDiv() {
+  circle.style.visibility = "visible";
 }
+
+const onMouseMove = (e) => {
+  circle.style.left = e.pageX + "px";
+  circle.style.top = e.pageY + "px";
+};
+
+document.addEventListener("mousemove", onMouseMove);
 
 function stopHoverDiv() {
   circle.style.visibility = "hidden";
