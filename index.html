@@ -12,10 +12,11 @@
     />
     <link rel="stylesheet" href="https://use.typekit.net/qoo2kea.css" />
     <link rel="stylesheet" href="style.css" />
+
     <script src="script.js" defer></script>
     <title>KUNSTHAL CHARLOTTENBORG | fed titel</title>
   </head>
-  <body>
+  <body class="smooth-scroll">
     <header class="main-grid">
       <nav role="navigation">
         <figure class="logo">
@@ -63,9 +64,10 @@
       </nav>
     </header>
     <main role="main">
+      <div id="circle"></div>
       <section class="hero-wrapper main-grid">
         <section class="hero-section tw-col-grid">
-          <figure class="hero-img">
+          <!--  <figure class="hero-img">
             <img
               src="billeder/placeholder.jpg"
               alt="Alternative text"
@@ -92,7 +94,7 @@
               alt="Alternative text"
               loading="lazy"
             />
-          </figure>
+          </figure> -->
           <h1 class="display-heading hero-heading">
             KUNSTHAL <span class="inline-margin">CHARLOTTENBORG</span>
           </h1>
@@ -101,19 +103,19 @@
       <section class="main-content main-grid">
         <section class="main-wrapper">
           <section class="udstilling-component">
-            <article class="udstilling-list">
+            <article class="udstilling-list" data-speed="auto">
               <h2 class="second-title">AKTUELLE UDSTILLINGER</h2>
               <article class="list-wrapper">
                 <!--Udstillings link-->
                 <a class="udstilling-link" href="#">
                   <div class="udstil-info">
                     <p class="udstil-name lead">JEANETTE EHLERS</p>
-                    <p class="udstil-tag detail">
+                    <p class="udstil-tag paragrapgh">
                       Archives in the Tounge: A Litany of Freedom
                     </p>
                   </div>
                   <div class="udstilling-dates">
-                    <p class="udstilling-start-date detail">17 SEB</p>
+                    <p class="udstilling-start-date paragrapgh">17 SEB</p>
                     <svg
                       width="18"
                       height="1"
@@ -130,19 +132,20 @@
                       />
                     </svg>
 
-                    <p class="udstilling-end-date detail">17 FEB 2023</p>
+                    <p class="udstilling-end-date paragrapgh">17 FEB 2023</p>
                   </div>
                 </a>
+                <!--Udstillings slut-->
                 <!--Udstillings link-->
                 <a class="udstilling-link" href="#">
                   <div class="udstil-info">
                     <p class="udstil-name lead">JEANETTE EHLERS</p>
-                    <p class="udstil-tag detail">
+                    <p class="udstil-tag paragrapgh">
                       Archives in the Tounge: A Litany of Freedom
                     </p>
                   </div>
                   <div class="udstilling-dates">
-                    <p class="udstilling-start-date detail">17 SEB</p>
+                    <p class="udstilling-start-date paragrapgh">17 SEB</p>
                     <svg
                       width="18"
                       height="1"
@@ -159,19 +162,20 @@
                       />
                     </svg>
 
-                    <p class="udstilling-end-date detail">17 FEB 2023</p>
+                    <p class="udstilling-end-date paragrapgh">17 FEB 2023</p>
                   </div>
                 </a>
+                <!--Udstillings slut-->
                 <!--Udstillings link-->
                 <a class="udstilling-link" href="#">
                   <div class="udstil-info">
                     <p class="udstil-name lead">JEANETTE EHLERS</p>
-                    <p class="udstil-tag detail">
+                    <p class="udstil-tag paragrapgh">
                       Archives in the Tounge: A Litany of Freedom
                     </p>
                   </div>
                   <div class="udstilling-dates">
-                    <p class="udstilling-start-date detail">17 SEB</p>
+                    <p class="udstilling-start-date paragrapgh">17 SEB</p>
                     <svg
                       width="18"
                       height="1"
@@ -188,19 +192,20 @@
                       />
                     </svg>
 
-                    <p class="udstilling-end-date detail">17 FEB 2023</p>
+                    <p class="udstilling-end-date paragrapgh">17 FEB 2023</p>
                   </div>
                 </a>
+                <!--Udstillings slut-->
                 <!--Udstillings link-->
                 <a class="udstilling-link" href="#">
                   <div class="udstil-info">
                     <p class="udstil-name lead">JEANETTE EHLERS</p>
-                    <p class="udstil-tag detail">
+                    <p class="udstil-tag paragrapgh">
                       Archives in the Tounge: A Litany of Freedom
                     </p>
                   </div>
                   <div class="udstilling-dates">
-                    <p class="udstilling-start-date detail">17 SEB</p>
+                    <p class="udstilling-start-date paragrapgh">17 SEB</p>
                     <svg
                       width="18"
                       height="1"
@@ -217,9 +222,10 @@
                       />
                     </svg>
 
-                    <p class="udstilling-end-date detail">17 FEB 2023</p>
+                    <p class="udstilling-end-date paragrapgh">17 FEB 2023</p>
                   </div>
                 </a>
+                <!--Udstillings slut-->
               </article>
               <a href="#" class="btn-primary btn-text">Udforsk Udstillinger</a>
             </article>
@@ -242,55 +248,157 @@
             </figure>
           </section>
           <section class="event-wrapper event-component">
-            <h2 class="second-title">EVENTS</h2>
-            <a href="#" data-src="billeder/cao-fei.jpg" class="event">
-              <article class="event-name">
-                <h3 class="fourth-title">FEDT EVENT</h3>
-                <p>Oplev et fedt event</p>
-              </article>
-              <div>
-                <article class="event-time">
-                  <p>01.01.22</p>
-                  <p>18.00-20.00</p>
+            <h2 class="second-title">KOMMENDE EVENTS</h2>
+            <article class="events">
+              <!-- Event start-->
+              <a href="#" class="event">
+                <article class="event-name">
+                  <h3 class="lead">FEDT EVENT</h3>
+                  <p class="paragrapgh">Oplev et fedt event</p>
                 </article>
-                <article class="event-tag">
+                <article class="event-tag paragrapgh">
                   <p>RUNDVISNING</p>
                   <p>MUSIK</p>
                 </article>
-              </div>
-            </a>
-            <a href="#" data-src="billeder/post-cap.jpg" class="event">
-              <article class="event-name">
-                <h3 class="fourth-title">FEDT EVENT</h3>
-                <p>Oplev et fedt event</p>
-              </article>
-              <div>
-                <article class="event-time">
-                  <p>01.01.22</p>
-                  <p>18.00-20.00</p>
+                <div class="event-date-time">
+                  <article class="event-date">
+                    <p class="paragrapgh">23 DEC 2022</p>
+                  </article>
+                  <div class="event-time">
+                    <p class="event-start-date paragrapgh">1800</p>
+                    <svg
+                      width="18"
+                      height="1"
+                      viewBox="0 0 18 1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="0.75"
+                        x2="18"
+                        y2="0.75"
+                        stroke="black"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+
+                    <p class="event-end-date paragrapgh">2100</p>
+                  </div>
+                </div>
+              </a>
+              <!-- Event slut-->
+              <!-- Event start-->
+              <a href="#" class="event">
+                <article class="event-name">
+                  <h3 class="lead">FEDT EVENT</h3>
+                  <p class="paragrapgh">Oplev et fedt event</p>
                 </article>
-                <article class="event-tag">
+                <article class="event-tag paragrapgh">
                   <p>RUNDVISNING</p>
                   <p>MUSIK</p>
                 </article>
-              </div>
-            </a>
-            <a href="#" data-src="billeder/cao-fei.jpg" class="event">
-              <article class="event-name">
-                <h3 class="fourth-title">FEDT EVENT</h3>
-                <p>Oplev et fedt event</p>
-              </article>
-              <div>
-                <article class="event-time">
-                  <p>01.01.22</p>
-                  <p>18.00-20.00</p>
+                <div class="event-date-time">
+                  <article class="event-date">
+                    <p class="paragrapgh">23 DEC 2022</p>
+                  </article>
+                  <div class="event-time">
+                    <p class="event-start-date paragrapgh">1800</p>
+                    <svg
+                      width="18"
+                      height="1"
+                      viewBox="0 0 18 1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="0.75"
+                        x2="18"
+                        y2="0.75"
+                        stroke="black"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+
+                    <p class="event-end-date paragrapgh">2100</p>
+                  </div>
+                </div>
+              </a>
+              <!-- Event slut-->
+              <!-- Event start-->
+              <a href="#" class="event">
+                <article class="event-name">
+                  <h3 class="lead">FEDT EVENT</h3>
+                  <p class="paragrapgh">Oplev et fedt event</p>
                 </article>
-                <article class="event-tag">
+                <article class="event-tag paragrapgh">
                   <p>RUNDVISNING</p>
                   <p>MUSIK</p>
                 </article>
-              </div>
-            </a>
+                <div class="event-date-time">
+                  <article class="event-date">
+                    <p class="paragrapgh">23 DEC 2022</p>
+                  </article>
+                  <div class="event-time">
+                    <p class="event-start-date paragrapgh">1800</p>
+                    <svg
+                      width="18"
+                      height="1"
+                      viewBox="0 0 18 1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="0.75"
+                        x2="18"
+                        y2="0.75"
+                        stroke="black"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+
+                    <p class="event-end-date paragrapgh">2100</p>
+                  </div>
+                </div>
+              </a>
+              <!-- Event slut-->
+              <!-- Event start-->
+              <a href="#" class="event">
+                <article class="event-name">
+                  <h3 class="lead">FEDT EVENT</h3>
+                  <p class="paragrapgh">Oplev et fedt event</p>
+                </article>
+                <article class="event-tag paragrapgh">
+                  <p>RUNDVISNING</p>
+                  <p>MUSIK</p>
+                </article>
+                <div class="event-date-time">
+                  <article class="event-date">
+                    <p class="paragrapgh">23 DEC 2022</p>
+                  </article>
+                  <div class="event-time">
+                    <p class="event-start-date paragrapgh">1800</p>
+                    <svg
+                      width="18"
+                      height="1"
+                      viewBox="0 0 18 1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="0.75"
+                        x2="18"
+                        y2="0.75"
+                        stroke="black"
+                        stroke-width="0.5"
+                      />
+                    </svg>
+
+                    <p class="event-end-date paragrapgh">2100</p>
+                  </div>
+                </div>
+              </a>
+              <!-- Event slut-->
+            </article>
           </section>
         </section>
       </section>

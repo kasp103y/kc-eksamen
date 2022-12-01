@@ -98,6 +98,10 @@ nav {
   overflow: hidden;
 }
 
+body {
+  background-color: var(--bg-color);
+}
+
 /****************************************************************** General styling **********************************************************************/
 
 /*** Text styles ***/
@@ -166,7 +170,7 @@ nav {
 .btn-text {
   font-size: var(--font-size-base);
   font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 a {
@@ -190,6 +194,20 @@ a {
 /****************************************************************** Mobile & general *************************************************************************/
 
 /*Navigation & burger*/
+
+#circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+
+  background-color: #000;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  transition: 100ms ease;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 header nav {
   display: flex;
@@ -219,7 +237,9 @@ header {
 
 .menu-item a {
   color: var(--font-color);
+
   mix-blend-mode: difference;
+  background-color: transparent;
 }
 
 .burger-icon {
@@ -257,7 +277,7 @@ header {
 
 .burger-icon .bar {
   height: 2px;
-  width: 40px;
+  width: 50px;
   background-color: var(--main-color);
   margin-block: var(--spacing-3);
 }
@@ -294,6 +314,7 @@ header {
   padding-inline: var(--spacing-6);
   border-radius: 999px;
   display: inline-flex;
+  transition: var(--easing);
 }
 
 /*Buttons over */
@@ -311,17 +332,22 @@ header {
 .udstilling-link {
   border-block: var(--border-thin-black);
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   padding-block: var(--spacing-3);
   margin-block: -1px;
+}
+
+.udstil-name {
+  margin-bottom: var(--spacing-3);
 }
 
 .udstilling-list .btn-primary {
   align-self: flex-start;
 }
 
-.udstilling-dates {
+.udstilling-dates,
+.event-time {
   display: flex;
   gap: var(--spacing-2);
   align-items: center;
@@ -360,12 +386,23 @@ header {
 .event > div {
   display: flex;
   justify-content: space-between;
-  min-width: 40%;
   align-items: center;
 }
 
-.event:hover ~ .event {
-  opacity: 0.3;
+.event-date-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.event-date,
+.event-tag p:first-child,
+.event-name .lead {
+  margin-bottom: var(--spacing-3);
+}
+
+.events {
+  transition: var(--easing);
 }
 
 /*Event module out */
@@ -518,6 +555,19 @@ header {
   .menu-item a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--btn-color-primary);
+    color: var(--btn-color-secondary);
+  }
+
+  .events:hover > .event {
+    opacity: 0.3;
+  }
+
+  .events .event:hover {
+    opacity: 1;
   }
 }
 
