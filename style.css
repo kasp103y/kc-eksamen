@@ -43,6 +43,9 @@
 
   --easing: ease 300ms;
   --easing-transform: transform ease 300ms;
+
+  --pseudo-top: 10px;
+  --pseudo-left: 10px;
 }
 
 /* IvyPresto Headline Light
@@ -217,6 +220,10 @@ a {
 .main-grid.black {
   background-color: var(--font-color);
 }
+
+.blur-us {
+  transition: var(--easing);
+}
 /*Navigation & burger*/
 
 #circle {
@@ -282,11 +289,6 @@ header {
 
 .bar {
   transition: var(--easing);
-}
-
-.burger-icon:hover .bar,
-.burger-icon.close-icon .bar {
-  margin-block: -1px;
 }
 
 .burger.open {
@@ -417,7 +419,6 @@ header {
   padding-block: var(--spacing-4);
   align-items: center;
   margin-bottom: -1px;
-  transition: var(--easing);
 }
 
 .event > div {
@@ -458,13 +459,6 @@ header {
 
 .about-p a {
   align-self: center;
-}
-
-.about-image {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  max-width: 70vw;
 }
 
 /*Om sektion frontpage mobil done */
@@ -622,6 +616,13 @@ header {
     grid-column-end: 2;
     grid-row-start: 1;
     width: 400px;
+    height: 600px;
+  }
+
+  .udstilling-img img {
+    height: 600px;
+    width: 400px;
+    object-fit: cover;
   }
 
   .udstilling-img figcaption:first-child {
@@ -639,6 +640,14 @@ header {
   }
 
   /***Udstillings slut ******/
+  /** About section **/
+  .about-image {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    max-width: 70vw;
+  }
+  /**About over **/
 }
 
 /****************************************************************** Hovers *************************************************************************/
@@ -676,13 +685,47 @@ header {
     color: var(--btn-color-primary);
   }
 
-  .events:hover > .event {
+  .blur-rest:hover > .blur-us {
     opacity: 0.3;
   }
 
-  .events .event:hover {
+  .blur-rest .blur-us:hover {
     opacity: 1;
   }
+
+  .blur-us {
+    position: relative;
+  }
+
+  .burger-icon:hover .bar,
+  .burger-icon.close-icon .bar {
+    margin-block: -1px;
+  }
+
+  div.mouse-event {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color-white);
+    border-radius: 99999px;
+    position: absolute;
+    transition: var(--easing-transform);
+    height: 150px;
+    width: 150px;
+    top: var(--pseudo-top);
+    left: var(--pseudo-left);
+    visibility: hidden;
+    background-color: var(--btn-color-primary);
+  }
+
+  .blur-us:hover:after {
+    visibility: visible;
+  }
+}
+
+.valgt {
+  background-color: blue;
 }
 
 /****************************************************************** Animations *********************************************************************/

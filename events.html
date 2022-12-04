@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>events</title>
+  </head>
+  <body>
+    <main class="main-grid">
+      <section class="main-wrapper main-content">
+        <nav>
+          <button data-event="alle" class="valgt">Alle events</button>
+          <button data-event="bøger">Bøger</button>
+          <button data-event="ferniseringer">Ferniseringer</button>
+          <button data-event="film">Film</button>
+          <button data-event="musik">Musik</button>
+          <button data-event="perfomances">Performances</button>
+          <button data-event="Rundvisninger">Rundvisninger</button>
+          <button data-event="Talks">Talks</button>
+          <button data-event="workshops">Workshops</button>
+          <button data-event="Seminar">Seminarer</button>
+        </nav>
+      </section>
+      <section class="event-container">
+        <template>
+          <button aria-label="event">
+            <h3 class="name"></h3>
+            <p class="title"></p>
+            <p class="dates"></p>
+            <p class="time"></p>
+            <p class="kategori"></p>
+            <p class="label"></p>
+            <p class="lokation"></p>
+          </button>
+        </template>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    const eventTemplate = document.querySelector("template");
+    const eventContainer = document.querySelector(".event-container");
+
+    window.addEventListener("DOMContentLoaded", start);
+    let events;
+    let filter = "alle";
+
+    function start() {
+      const eventJSON = "events.json";
+
+      const filterKnapper = document.querySelectorAll("nav button");
+      filterKnapper.forEach((knap) =>
+        knap.addEventListener("click", filtrerMenu)
+      );
+
+      hentData(eventJSON);
+    }
+
+    function filtrerMenu() {
+      filter = this.dataset.event;
+      //This = det man trykker på og bestemmer kategori
+      //Sætter filter på værdien menu (Alle retter)
+      console.log(this);
+
+      document.querySelector(".valgt").classList.remove("valgt");
+      //Fjerne class fra forrige knap
+      this.classList.add("valgt");
+      //Tilføjer class til klikket knap
+      vis(); //Kalder vis function efter nyt filter er påsat
+    }
+
+    async function hentData(eventJSON) {
+      //Promise - data lover program at komme med data, imen det køre videre
+      const result = await fetch(eventJSON);
+      events = await result.json();
+      console.log(events);
+      vis();
+    }
+
+    function vis() {
+      eventContainer.textContent = ""; //Ryd container inden loop
+      //console.log(filter);
+
+      events.forEach((event) => {
+        if (filter == event.kategori || filter == "alle") {
+          //Er filter det samme som objekt? || betyder eller
+          //Bestemt kategori eller alle objekter
+          console.log(filter);
+          let klon = eventTemplate.cloneNode(true).content;
+
+          //Placer i HTML
+
+          klon.querySelector(".name").textContent = event.name;
+          klon.querySelector(".title").textContent = event.title;
+          klon.querySelector(".dates").textContent = event.dates;
+          klon.querySelector(".time").textContent = event.time;
+          klon.querySelector(".kategori").textContent = event.kategori;
+          klon.querySelector(".label").textContent = event.label;
+          klon.querySelector(".lokation").textContent = event.lokation;
+
+          eventContainer.appendChild(klon);
+        }
+      });
+    }
+  </script>
+</html>
