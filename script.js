@@ -4,16 +4,14 @@ function start() {
   const burgerIcon = document.querySelector(".burger-icon");
   const burgerMenu = document.querySelector(".burger");
   const header = document.querySelector("header");
-
-  const udstilImg = document.querySelector(".udstilling-link");
-  let linkHover = document.querySelector(".event");
-  let circle = document.getElementById("circle");
+  const deBody = document.querySelector("body");
 
   burgerIcon.addEventListener("click", burgerOnClick);
 
   function burgerOnClick() {
     burgerMenu.classList.toggle("open");
     burgerIcon.classList.toggle("close-icon");
+    deBody.classList.toggle("stop-scrolling");
 
     header.classList.toggle("mix-blend");
 

@@ -113,10 +113,13 @@ nav {
   overflow: hidden;
 }
 
-html,
 body {
   background-color: var(--bg-color);
   overflow-x: hidden;
+}
+
+body.stop-scrolling {
+  overflow-y: hidden;
 }
 
 .padding-block {
@@ -593,6 +596,15 @@ footer {
   scroll-snap-type: x mandatory;
   gap: var(--spacing-4);
   padding-block: var(--spacing-3);
+}
+
+.nyheder-content::-webkit-scrollbar {
+  display: none;
+}
+
+.nyheder-conten:after {
+  height: 100%;
+  width: 10px;
 }
 
 .nyheder-content a {
