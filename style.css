@@ -113,13 +113,13 @@ nav {
   overflow: hidden;
 }
 
-body {
+html {
   background-color: var(--bg-color);
   overflow-x: hidden;
 }
 
 body.stop-scrolling {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .padding-block {
@@ -132,6 +132,7 @@ body.stop-scrolling {
 
 .display-heading {
   font-size: var(--font-size-xxxxl);
+  margin-bottom: var(--spacing-8);
   font-family: ivypresto-headline, serif;
   font-weight: 300;
   font-style: normal;
@@ -140,6 +141,7 @@ body.stop-scrolling {
 
 .main-title {
   font-size: var(--font-size-xxxl);
+  margin-bottom: var(--spacing-8);
   font-family: ivypresto-headline, serif;
   margin-bottom: var(--spacing-3);
   font-weight: 400;
@@ -147,14 +149,20 @@ body.stop-scrolling {
 
 .second-title {
   font-size: var(--font-size-xxl);
-  font-family: ivypresto-headline, serif;
+  font-family: var(--serif);
   font-weight: 400;
   font-style: normal;
+  margin-bottom: var(--spacing-6);
+}
+
+.burger-item a {
+  font-size: var(--font-size-xl);
+  font-family: var(--serif);
 }
 
 .third-title {
   font-size: var(--font-size-xl);
-  font-family: "Tinos", serif;
+  font-family: var(--sans-serif);
 }
 
 .fourth-title {
@@ -274,6 +282,8 @@ header {
   position: fixed;
   width: 100vw;
   z-index: 10000;
+  top: 0;
+  left: 0;
 }
 
 header.mix-blend {
@@ -313,6 +323,51 @@ header.mix-blend {
   background-color: var(--bg-color);
 }
 
+.burger-icon.close-icon .bar {
+  margin-block: 0px;
+}
+
+.sub-burger-btn button {
+  font-size: var(--font-size-xl);
+  font-family: var(--serif);
+  border: none;
+  background-color: transparent;
+  color: var(--font-color-white);
+  font-weight: var(--paragraph-weight);
+  cursor: pointer;
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: baseline;
+}
+
+#back {
+  font-size: var(--font-size-md);
+  font-family: var(--sans-serif);
+  border: var(--border-thin-white);
+  border-radius: 99999px;
+  padding-block: var(--spacing-1);
+  padding-inline: var(--spacing-2);
+  background-color: transparent;
+  color: var(--font-color-white);
+  font-weight: var(--paragraph-weight);
+  cursor: pointer;
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: center;
+  margin-top: var(--spacing-4);
+}
+
+#back svg {
+  transform: rotate(180deg);
+  height: 12px;
+  width: 12px;
+}
+
+.sub-burger-btn button svg {
+  height: 24px;
+  width: 24px;
+}
+
 .sub-menu li a {
   color: var(--font-color-white);
 }
@@ -346,10 +401,25 @@ header.mix-blend {
   mix-blend-mode: normal;
   top: 0%;
   left: 100%;
+  padding: var(--spacing-3);
 
   transition: var(--easing);
   z-index: 100;
   color: var(--font-color-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.burger .info {
+  display: none;
 }
 
 .sub-burger {
@@ -359,12 +429,20 @@ header.mix-blend {
   background-color: var(--main-color);
   color: white;
   mix-blend-mode: normal;
+  padding: var(--spacing-3);
   top: 0%;
   left: -100%;
-
+  padding-top: var(--spacing-4);
   transition: var(--easing);
   z-index: 200;
   color: var(--font-color-white);
+}
+
+.sub-burger article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .logo svg path {
@@ -420,6 +498,14 @@ footer {
 
 .hero-wrapper {
   background-color: var(--bg-color);
+}
+
+.hero-section .udstilling-grid {
+  display: none;
+}
+
+.hero-section {
+  min-height: 80vh;
 }
 
 /*Hero section over & out >_>*/
@@ -518,10 +604,6 @@ footer {
 }
 
 .event-wrapper {
-  margin-block: var(--spacing-8);
-}
-
-.event-wrapper .second-title {
   margin-block: var(--spacing-8);
 }
 
@@ -630,6 +712,16 @@ footer {
     grid-column-end: 3;
   }
 
+  .hero-section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: grid;
+    align-items: center;
+
+    gap: var(--spacing-4);
+  }
+
   .nyheder-content a {
     min-width: 100%;
   }
@@ -677,6 +769,8 @@ footer {
 
   .tw-col-grid {
     display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(9, 1fr);
   }
@@ -744,15 +838,8 @@ footer {
 
   /*HERO*/
 
-  .hero-section {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    min-height: 80vh;
-
-    display: grid;
-    align-items: center;
-
-    gap: var(--spacing-4);
+  .hero-section .udstilling-grid {
+    display: block;
   }
 
   .hero-section .hero-heading {
@@ -883,7 +970,7 @@ footer {
 
   .burger-icon:hover .bar,
   .burger-icon.close-icon .bar {
-    margin-block: -1px;
+    margin-block: 0px;
   }
 
   div.mouse-event {
