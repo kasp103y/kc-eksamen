@@ -1,12 +1,14 @@
 :root {
   /*************** Colors ******************/
-  --main-color: #000;
+  --main-color: #131212;
   --secondary-color: #bada55;
-  --bg-color: #fff;
-  --font-color: #000;
-  --font-color-white: #fff;
-  --btn-color-primary: #000;
-  --btn-color-secondary: #fff;
+  --bg-color: #faf9f8;
+  --font-color: #131212;
+  --font-color-white: #faf9f8;
+  --font-color-trans: #131212d1;
+  --font-color-white-trans: #faf9f8d1;
+  --btn-color-primary: #131212;
+  --btn-color-secondary: #faf9f8;
 
   /*************** Font sizes ******************/
 
@@ -19,11 +21,15 @@
   --font-size-xxxl: clamp(3.05rem, 2.1vw + 2.53rem, 4.21rem);
   --font-size-xxxxl: clamp(3.81rem, 3.26vw + 3rem, 5.61rem);
 
+  --sans-serif: canada-type-gibson, sans-serif;
+  --serif: ivypresto-headline, serif;
+  --paragraph-weight: 300;
+
   /*************** Borders ******************/
-  --border-thin-black: 1px solid black;
-  --border-thick-black: 2px solid black;
-  --border-thick-white: 2px solid #fff;
-  --border-thin-white: 1px solid #fff;
+  --border-thin-black: 1px solid #131212;
+  --border-thick-black: 2px solid #131212;
+  --border-thick-white: 2px solid #faf9f8;
+  --border-thin-white: 1px solid #faf9f8;
   /*************** spacing ******************/
   --spacing-1: 4px;
   --spacing-2: 8px;
@@ -89,6 +95,11 @@ font-style: normal; */
   padding: 0;
 }
 
+html {
+  font-family: var(--sans-serif);
+  font-weight: var(--paragraph-weight);
+}
+
 img {
   height: auto;
   width: 100%;
@@ -102,8 +113,10 @@ nav {
   overflow: hidden;
 }
 
+html,
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 .padding-block {
@@ -124,7 +137,8 @@ body {
 
 .main-title {
   font-size: var(--font-size-xxxl);
-  font-family: "Tinos", serif;
+  font-family: ivypresto-headline, serif;
+  margin-bottom: var(--spacing-3);
   font-weight: 400;
 }
 
@@ -142,12 +156,12 @@ body {
 
 .fourth-title {
   font-size: var(--font-size-lg);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
 }
 
 .fifth-title {
   font-size: var(--font-size-md);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
 }
 
 .lead {
@@ -159,33 +173,34 @@ body {
 
 .xl-paragrapgh {
   font-size: var(--font-size-xl);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
 }
 
-.paragrapgh {
+.paragraph {
   font-size: var(--font-size-base);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
+  font-weight: var(--paragraph-weight);
 }
 
 .detail {
   font-size: var(--font-size-sm);
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-family: var(--sans-serif);
 }
 
 .link-title {
   font-size: var(--font-size-md);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
 }
 
 .btn-text {
   font-size: var(--font-size-base);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
   font-weight: 500;
 }
 
 .h1-span {
   font-size: var(--font-size-base);
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-family: var(--sans-serif);
   font-weight: 500;
   vertical-align: text-top;
 }
@@ -255,6 +270,11 @@ header nav {
 header {
   position: fixed;
   width: 100vw;
+  z-index: 10000;
+}
+
+header.mix-blend {
+  mix-blend-mode: difference;
 }
 
 .nav-wrapper {
@@ -265,33 +285,37 @@ header {
 
 .menu {
   gap: var(--spacing-5);
-  color: var(--font-color);
+  color: var(--bg-color);
   display: none;
 }
 
 .menu-item a {
-  color: var(--font-color);
-
-  mix-blend-mode: difference;
-  background-color: transparent;
+  color: var(--bg-color);
 }
 
 .burger-icon {
   border: none;
   background-color: transparent;
   height: 80px;
+
   margin: 0;
   cursor: pointer;
   position: relative;
-  z-index: 200;
+  z-index: 300;
   transition: var(--easing);
 }
 
 .bar {
   transition: var(--easing);
+  background-color: var(--bg-color);
 }
 
-.burger.open {
+.sub-menu li a {
+  color: var(--font-color-white);
+}
+
+.burger.open,
+.sub-burger.open {
   top: 0%;
   left: 0%;
 }
@@ -307,7 +331,7 @@ header {
 .burger-icon .bar {
   height: 2px;
   width: 50px;
-  background-color: var(--main-color);
+  background-color: var(--bg-color);
   margin-block: var(--spacing-3);
 }
 
@@ -315,17 +339,34 @@ header {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background-color: var(--bg-color);
+  background-color: var(--main-color);
+  mix-blend-mode: normal;
   top: 0%;
   left: 100%;
-  z-index: 100;
+
   transition: var(--easing);
-  z-index: 20;
+  z-index: 100;
+  color: var(--font-color-white);
+}
+
+.sub-burger {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: var(--main-color);
+  color: white;
+  mix-blend-mode: normal;
+  top: 0%;
+  left: -100%;
+
+  transition: var(--easing);
+  z-index: 200;
+  color: var(--font-color-white);
 }
 
 .logo svg path {
-  fill: var(--main-color);
-  color: var(--main-color);
+  fill: var(--bg-color);
+  color: var(--bg-color);
 }
 
 .logo {
@@ -334,6 +375,13 @@ header {
 }
 
 /* !navigation */
+/* Footer */
+
+footer {
+  background-color: var(--main-color);
+}
+
+/*Footer over */
 
 /* Buttons */
 
@@ -403,6 +451,69 @@ header {
 
 /*Event frontapge mobil module */
 
+.filter-buttons .filter {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--spacing-6);
+  margin-block: var(--spacing-6);
+}
+
+.filter-btn {
+  border: none;
+  background-color: transparent;
+  padding-block: var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  transition: var(--easing);
+}
+
+.event-button {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  text-align: left;
+  border-block: var(--border-thick-black);
+  border-inline: none;
+  padding-block: var(--spacing-4);
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.event-button article:nth-child(1) {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  justify-content: start;
+  align-items: center;
+}
+
+.event-button article:nth-child(2) > * {
+  margin-bottom: var(--spacing-2);
+}
+
+.event-button article:last-child {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.outline-label {
+  border: var(--border-thin-black);
+  border-radius: 9999px;
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.valgt {
+  border-bottom: var(--border-thick-black);
+}
+
+.event-intro {
+  margin-top: var(--spacing-10);
+  padding-top: var(--spacing-10);
+  max-width: 800px;
+}
+
 .event-wrapper {
   margin-block: var(--spacing-8);
 }
@@ -463,6 +574,36 @@ header {
 
 /*Om sektion frontpage mobil done */
 
+/*Nyheder*/
+
+.nyheder {
+  padding-block: var(--spacing-10);
+  max-width: 100vw;
+}
+
+.nyhed-txt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.nyheder-content {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: var(--spacing-4);
+  padding-block: var(--spacing-3);
+}
+
+.nyheder-content a {
+  min-width: 80vw;
+  scroll-snap-align: start;
+}
+
+.image-holder {
+  display: none;
+}
+
 /****************************************************************** Tablet *************************************************************************/
 
 @media screen and (min-width: 768px) {
@@ -470,6 +611,33 @@ header {
   .main-grid {
     display: grid;
     grid-template-columns: 5% 1fr 10%;
+  }
+
+  .main-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .nyheder-content a {
+    min-width: 100%;
+  }
+
+  .nyheder {
+    padding-block: var(--spacing-10);
+    width: 100%;
+  }
+
+  .nyheder-content {
+    display: flex;
+
+    gap: var(--spacing-4);
+    padding-block: 0;
+  }
+
+  .nyheder-content a {
+    min-width: 0;
+    width: 100%;
+    scroll-snap-align: start;
   }
 }
 
@@ -487,6 +655,10 @@ header {
     display: inline-block;
     position: relative;
     padding-block: var(--spacing-2);
+  }
+
+  .image-holder {
+    display: block;
   }
 
   /*GRIDS*/
@@ -663,7 +835,7 @@ header {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--font-color);
+    background-color: var(--bg-color);
     transform-origin: bottom right;
     transition: var(--easing-transform);
   }
@@ -722,10 +894,6 @@ header {
   .blur-us:hover:after {
     visibility: visible;
   }
-}
-
-.valgt {
-  background-color: blue;
 }
 
 /****************************************************************** Animations *********************************************************************/

@@ -1,23 +1,61 @@
 [
   {
-    "ID": "001",
+    "id": "001",
     "name": "CAO FEI/POST CAPITAL/DIGTIAL MATTER",
     "title": "Gratis omvisninger i efteråret",
     "dates": "17 SEP - 19 FEB",
     "time": "17.00 - 20.00",
     "kategori": ["Rundvisninger", "Talks"],
-    "label": "Denne Uge",
-    "lokation": "Kunsthal Charlottenborg"
+    "label": "DENNE UGE",
+    "hvor": "Event på Facebook",
+    "lokation": "KUNSTHAL CHARLOTTENBORG"
   },
 
   {
-    "ID": "002",
+    "id": "002",
     "name": "Smurp My Nurps",
     "title": "These Nurps aint for smurpin sucka",
     "dates": "22 OKT - 69 DEC",
     "time": "17.00 - 20.00",
     "kategori": "Seminar",
-    "label": "Næste Uge",
+    "label": "DENNE UGE",
+    "hvor": "Event på Facebook",
+    "lokation": "CPH DOX"
+  },
+
+  {
+    "id": "003",
+    "name": "Smurp My Nurps",
+    "title": "These Nurps aint for smurpin sucka",
+    "dates": "22 OKT - 69 DEC",
+    "time": "17.00 - 20.00",
+    "kategori": "Workshops",
+    "label": "DENNE UGE",
+    "hvor": "Event på Facebook",
+    "lokation": "CPH DOX"
+  },
+
+  {
+    "id": "004",
+    "name": "Smurp My Nurps",
+    "title": "These Nurps aint for smurpin sucka",
+    "dates": "22 OKT - 69 DEC",
+    "time": "17.00 - 20.00",
+    "kategori": "Film",
+    "label": "DENNE UGE",
+    "hvor": "Event på Facebook",
+    "lokation": "CPH DOX"
+  },
+
+  {
+    "id": "005",
+    "name": "Smurp My Nurps",
+    "title": "These Nurps aint for smurpin sucka",
+    "dates": "22 OKT - 69 DEC",
+    "time": "17.00 - 20.00",
+    "kategori": "Bøger",
+    "label": "DENNE UGE",
+    "hvor": "Event på Facebook",
     "lokation": "CPH DOX"
   }
 ]

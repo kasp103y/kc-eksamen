@@ -1,42 +1,64 @@
-const burgerIcon = document.querySelector(".burger-icon");
-const burgerMenu = document.querySelector(".burger");
+window.addEventListener("DOMContentLoaded", start);
 
-const udstilImg = document.querySelector(".udstilling-link");
-let linkHover = document.querySelector(".event");
-let circle = document.getElementById("circle");
+function start() {
+  const burgerIcon = document.querySelector(".burger-icon");
+  const burgerMenu = document.querySelector(".burger");
+  const header = document.querySelector("header");
 
-burgerIcon.addEventListener("click", burgerOnClick);
+  const udstilImg = document.querySelector(".udstilling-link");
+  let linkHover = document.querySelector(".event");
+  let circle = document.getElementById("circle");
 
-function burgerOnClick() {
-  burgerMenu.classList.toggle("open");
-  burgerIcon.classList.toggle("close-icon");
-  //HUSK AT GØRE SÅ ARIA_EXPANDED BLIVER ===
+  burgerIcon.addEventListener("click", burgerOnClick);
+
+  function burgerOnClick() {
+    burgerMenu.classList.toggle("open");
+    burgerIcon.classList.toggle("close-icon");
+
+    header.classList.toggle("mix-blend");
+
+    const subBurgerBtn = document.querySelector(".sub-burger-btn");
+    const subBurger = document.querySelector(".sub-burger");
+    const lukSub = document.querySelector("#back");
+
+    subBurger.classList.remove("open");
+
+    subBurgerBtn.addEventListener("click", () => {
+      subBurger.classList.add("open");
+
+      lukSub.addEventListener("click", () => {
+        subBurger.classList.remove("open");
+      });
+    });
+
+    //HUSK AT GØRE SÅ ARIA_EXPANDED BLIVER ===
+  }
+
+  const udstilLink = document.querySelectorAll(".udstilling-link");
+  const image = document.querySelector("#image-hover");
+  const figTitle = document.querySelector(".fig-title");
+  const figArtist = document.querySelector(".fig-artist");
+
+  udstilLink.forEach((e) => {
+    e.addEventListener("mouseover", changeImage);
+    e.addEventListener("mouseout", changeImageBack);
+    function changeImage() {
+      let value = this.getAttribute("data-src");
+      let title = this.getAttribute("data-title");
+      let artist = this.getAttribute("data-artist");
+      /* console.log(); */
+      image.src = value;
+      figTitle.innerHTML = title;
+      figArtist.innerHTML = artist;
+      /*   console.log(image); */
+    }
+    function changeImageBack() {
+      figTitle.innerHTML = "SE UDSTILLINGER";
+      figArtist.innerHTML = "SE UDSTILLINGER ";
+      image.src = "billeder/white-img.jpg";
+    }
+  });
 }
-
-const udstilLink = document.querySelectorAll(".udstilling-link");
-const image = document.querySelector("#image-hover");
-const figTitle = document.querySelector(".fig-title");
-const figArtist = document.querySelector(".fig-artist");
-
-udstilLink.forEach((e) => {
-  e.addEventListener("mouseover", changeImage);
-  e.addEventListener("mouseout", changeImageBack);
-  function changeImage() {
-    let value = this.getAttribute("data-src");
-    let title = this.getAttribute("data-title");
-    let artist = this.getAttribute("data-artist");
-    /* console.log(); */
-    image.src = value;
-    figTitle.innerHTML = title;
-    figArtist.innerHTML = artist;
-    /*   console.log(image); */
-  }
-  function changeImageBack() {
-    figTitle.innerHTML = "CAO FEI";
-    figArtist.innerHTML = "HEART LAND FESTIVAL";
-    image.src = "billeder/white-img.jpg";
-  }
-});
 
 /*
 
