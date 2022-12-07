@@ -242,9 +242,14 @@ a {
 
 .main-grid {
   padding-inline: var(--spacing-3);
+  background-color: var(--bg-color);
+}
+
+header.main-grid {
+  background-color: transparent;
 }
 .main-grid.black {
-  background-color: var(--font-color);
+  background-color: var(--main-color);
 }
 
 .blur-us {
@@ -412,14 +417,37 @@ header.mix-blend {
   justify-content: center;
 }
 
+.burger-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: var(--spacing-10);
+  /*  justify-content: space-around; */
+}
+
 .sub-menu {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-4);
+  margin-block: var(--spacing-8);
+}
+
+.info-item {
+  display: flex;
+  margin-block: var(--spacing-3);
+  min-width: 100px;
+}
+
+.info-item p {
+  width: 200px;
+  justify-self: start;
 }
 
 .burger .info {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
 }
 
 .sub-burger {
@@ -743,12 +771,73 @@ footer {
     width: 100%;
     scroll-snap-align: start;
   }
+
+  .sub-menu {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+
+  .burger-wrapper {
+    justify-content: space-around;
+  }
+
+  .burger-wrapper {
+    padding-top: 0;
+    /*  justify-content: space-around; */
+  }
+
+  .sub-menu {
+    margin-block: 0;
+  }
+
+  .burger-item a,
+  .burger-item button {
+    font-size: var(--font-size-xxl);
+  }
 }
 
 /****************************************************************** Desktop ************************************************************************/
 
 @media screen and (min-width: 1000px) {
   /* Desktop styling goes here  */
+
+  #cursor {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    border: var(--border-thin-white);
+
+    pointer-events: none;
+    transition: top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out,
+      height 0.1s ease-out, background-color 0.1s ease-out;
+    z-index: 9999999999;
+  }
+  #cursor.vis {
+    height: 100px;
+    width: 100px;
+    background-color: var(--main-color);
+
+    display: grid;
+    place-items: center;
+    mix-blend-mode: normal;
+  }
+
+  #cta {
+    visibility: hidden;
+  }
+
+  #cursor.vis #cta {
+    visibility: visible;
+    text-align: center;
+    font-family: var(--sans-serif);
+    font-size: var(--font-size-base);
+    color: var(--font-color-white);
+  }
 
   /*NAV*/
   .menu {

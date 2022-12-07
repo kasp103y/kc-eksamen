@@ -56,6 +56,31 @@ function start() {
       image.src = "billeder/white-img.jpg";
     }
   });
+
+  let circle = document.getElementById("cursor");
+  const onMouseMove = (e) => {
+    circle.style.left = e.pageX + "px";
+    circle.style.top = e.pageY + "px";
+  };
+  document.addEventListener("mousemove", onMouseMove);
+
+  const hoverCursor = document.querySelectorAll(".blur-us");
+
+  hoverCursor.forEach((e) => {
+    e.addEventListener("mouseenter", visCircle);
+
+    function visCircle() {
+      circle.classList.add("vis");
+    }
+  });
+
+  hoverCursor.forEach((e) => {
+    e.addEventListener("mouseleave", shrinkCircle);
+
+    function shrinkCircle() {
+      circle.classList.remove("vis");
+    }
+  });
 }
 
 /*
