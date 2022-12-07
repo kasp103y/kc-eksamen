@@ -1,6 +1,22 @@
 :root {
   /*************** Colors ******************/
   --main-color: #131212;
+  --primary-light: #faf9f8;
+  --secondary-light: #d3cfcc;
+  --tetriary-light: #a9a9a9;
+
+  --dark-800: #131212;
+  --dark-700: #2b2a2a;
+  --dark-600: #424141;
+  --dark-500: #5a5959;
+  --dark-400: #666565;
+  --dark-300: #717171;
+
+  --danger: #ff3a31;
+  --danger-light: #ffb3af;
+  --succes: #4ed964;
+  --succes-light: #b1d6b7;
+
   --secondary-color: #bada55;
   --bg-color: #faf9f8;
   --font-color: #131212;
@@ -136,9 +152,16 @@ body.stop-scrolling {
 
 .lead {
   font-size: var(--font-size-md);
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: var(--sans-serif);
   font-weight: 400;
   font-style: normal;
+}
+
+.list-header {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  /* need variant */
 }
 
 .xl-paragrapgh {
@@ -146,11 +169,15 @@ body.stop-scrolling {
   font-family: var(--sans-serif);
 }
 
+.list-paragraph {
+  font-size: var(--font-size-base);
+  font-weight: 300;
+}
+
 .paragraph {
   font-size: var(--font-size-md);
   font-family: var(--sans-serif);
   font-weight: var(--paragraph-weight);
-  margin-block: var(--spacing-6);
 }
 
 .detail {
@@ -205,11 +232,15 @@ a {
   background-color: var(--bg-color);
 }
 
+.main-wrapper {
+  background-color: var(--bg-color);
+}
+
 header.main-grid {
   background-color: transparent;
 }
 .main-grid.black {
-  background-color: var(--main-color);
+  background-color: var(--dark-800);
 }
 
 .blur-us {
@@ -359,7 +390,7 @@ header.mix-blend {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background-color: var(--main-color);
+  background-color: var(--dark-800);
   mix-blend-mode: normal;
   top: 0%;
   left: 100%;
@@ -411,7 +442,7 @@ header.mix-blend {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background-color: var(--main-color);
+  background-color: var(--dark-800);
   color: white;
   mix-blend-mode: normal;
   padding: var(--spacing-3);
@@ -444,7 +475,7 @@ header.mix-blend {
 /* Footer */
 
 footer {
-  background-color: var(--main-color);
+  background-color: var(--dark-800);
 }
 
 /*Footer over */
@@ -485,6 +516,10 @@ footer {
   background-color: var(--bg-color);
 }
 
+.hero-heading {
+  z-index: 1;
+}
+
 .hero-section .udstilling-grid {
   display: none;
 }
@@ -521,6 +556,12 @@ footer {
   align-items: center;
 }
 
+h3.name {
+  font-size: 24px;
+  font-weight: 500;
+  /* Ændre mig til variable!! */
+}
+
 /*Udstillinger component over ***/
 
 /*Event frontapge mobil module */
@@ -549,7 +590,7 @@ footer {
   border-block: var(--border-thick-black);
   border-inline: none;
   padding-block: var(--spacing-4);
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   cursor: pointer;
 }
 
@@ -636,6 +677,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.about-p h2 {
+  max-width: 1100px;
 }
 
 .about-p a {
@@ -760,6 +806,27 @@ footer {
 @media screen and (min-width: 1000px) {
   /* Desktop styling goes here  */
 
+  .coop-section article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-6);
+    border-top: var(--border-thin-black);
+    padding-top: var(--spacing-8);
+  }
+
+  .coop-section h2 {
+    grid-column: 1/2;
+  }
+  .coop-section figure {
+    grid-column: 2/3;
+  }
+
+  .coop-section p {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
   #cursor {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -778,7 +845,7 @@ footer {
   #cursor.vis {
     height: 100px;
     width: 100px;
-    background-color: var(--main-color);
+    background-color: var(--dark-800);
     border: none;
     display: grid;
     place-items: center;
@@ -938,8 +1005,8 @@ footer {
   .tw-col-grid .udstillinger-grid {
     grid-column-start: 7;
     grid-column-end: 13;
-    grid-row-start: 2;
-    grid-row-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 10;
   }
 
   .hero-intro .paragrapgh {
@@ -1009,6 +1076,24 @@ footer {
   .form-wrapper h2 {
     max-width: 500px;
   }
+
+  /*   .drop-down {
+    position: absolute;
+    background-color: var(--dark-800);
+    isolation: isolate;
+
+    width: 300px;
+    padding: var(--spacing-4);
+    visibility: hidden;
+    transition: var(--easing);
+    opacity: 0;
+    z-index: 999999;
+  }
+
+  .drop-down.open-down {
+    visibility: visible;
+    opacity: 1;
+  } */
 }
 
 /****************************************************************** Hovers *************************************************************************/
@@ -1110,17 +1195,20 @@ form label {
   margin-bottom: var(--spacing-3);
 }
 
-form div button {
+form .input-wrapper button {
   white-space: nowrap;
 }
 
-form div {
+/* .error-form {
+} */
+
+form .input-wrapper {
   display: flex;
   position: relative;
   border-radius: 9999px;
   justify-content: space-between;
 
-  background-color: var(--main-color);
+  background-color: var(--dark-800);
   border: var(--border-thin-white);
 }
 
