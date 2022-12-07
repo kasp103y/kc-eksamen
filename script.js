@@ -5,8 +5,36 @@ function start() {
   const burgerMenu = document.querySelector(".burger");
   const header = document.querySelector("header");
   const deBody = document.querySelector("body");
+  const dropdown = document.querySelector(".drop-down");
+  const dropdownBtn = document.querySelector("#drop-down");
+
+  /*  dropdownBtn.addEventListener("mouseover", showDropdown);
+  dropdownBtn.addEventListener("mouseout", hideDropdown);
+  function showDropdown() {
+    dropdown.classList.toggle("open-down");
+  }
+
+  function hideDropdown() {
+    dropdown.classList.toggle("open-down");
+  }
+ */
 
   burgerIcon.addEventListener("click", burgerOnClick);
+  const subBurgerBtn = document.querySelector(".sub-burger-btn");
+  const subBurger = document.querySelector(".sub-burger");
+  const lukSub = document.querySelector("#back");
+
+  dropdownBtn.addEventListener("click", showDropdown);
+  lukSub.addEventListener("click", hideDropdown);
+
+  function showDropdown() {
+    subBurger.classList.toggle("open");
+    header.classList.toggle("mix-blend");
+  }
+  function hideDropdown() {
+    subBurger.classList.toggle("open");
+    header.classList.toggle("mix-blend");
+  }
 
   function burgerOnClick() {
     burgerMenu.classList.toggle("open");
@@ -14,10 +42,6 @@ function start() {
     deBody.classList.toggle("stop-scrolling");
 
     header.classList.toggle("mix-blend");
-
-    const subBurgerBtn = document.querySelector(".sub-burger-btn");
-    const subBurger = document.querySelector(".sub-burger");
-    const lukSub = document.querySelector("#back");
 
     subBurger.classList.remove("open");
 
