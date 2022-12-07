@@ -81,6 +81,24 @@ function start() {
       circle.classList.remove("vis");
     }
   });
+
+  const hoverCursorSecondary = document.querySelectorAll(".hover-circle");
+
+  hoverCursorSecondary.forEach((e) => {
+    e.addEventListener("mouseenter", visCircleSecondary);
+
+    function visCircleSecondary() {
+      circle.classList.add("vis-var");
+    }
+  });
+
+  hoverCursorSecondary.forEach((e) => {
+    e.addEventListener("mouseleave", shrinkCircleSecondary);
+
+    function shrinkCircleSecondary() {
+      circle.classList.remove("vis-var");
+    }
+  });
 }
 
 /*

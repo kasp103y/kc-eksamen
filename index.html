@@ -23,7 +23,7 @@
     </div>
     <header class="main-grid mix-blend">
       <nav role="navigation">
-        <figure class="logo">
+        <figure class="logo hover-circle">
           <a href="index.html">
             <svg
               width="268"
@@ -46,12 +46,16 @@
         </figure>
         <section class="nav-wrapper">
           <ul class="menu">
-            <li class="menu-item"><a href="#">UDSTILLINGER</a></li>
-            <li class="menu-item"><a href="#">PLANLÆG DIT BESØG</a></li>
-            <li class="menu-item"><a href="#">ÅRSKORT & BILLETTER</a></li>
+            <li class="menu-item hover-circle"><a href="#">Udstillinger</a></li>
+            <li class="menu-item hover-circle">
+              <a href="#">Besøg Kunsthallen</a>
+            </li>
+            <li class="menu-item hover-circle">
+              <a href="#">Årskort & Billetter</a>
+            </li>
           </ul>
           <button
-            class="burger-icon"
+            class="burger-icon hover-circle"
             aria-label="menu button"
             aria-expanded="false"
           >
@@ -61,8 +65,10 @@
           <article class="burger">
             <article class="burger-wrapper">
               <ul class="sub-menu">
-                <li class="burger-item"><a href="#">Udstillinger</a></li>
-                <li class="burger-item sub-burger-btn">
+                <li class="burger-item hover-circle">
+                  <a href="#">Udstillinger</a>
+                </li>
+                <li class="burger-item hover-circle sub-burger-btn">
                   <button href="#">
                     Besøg kunsthallen
                     <svg
@@ -79,10 +85,18 @@
                     </svg>
                   </button>
                 </li>
-                <li class="burger-item"><a href="#">Årskort & billetter</a></li>
-                <li class="burger-item"><a href="events.html">Events</a></li>
-                <li class="burger-item"><a href="#">Nyheder</a></li>
-                <li class="burger-item"><a href="#">Kontakt Kunsthallen</a></li>
+                <li class="burger-item hover-circle">
+                  <a href="#">Årskort & billetter</a>
+                </li>
+                <li class="burger-item hover-circle">
+                  <a href="events.html">Events</a>
+                </li>
+                <li class="burger-item hover-circle">
+                  <a href="#">Nyheder</a>
+                </li>
+                <li class="burger-item hover-circle">
+                  <a href="#">Kontakt Kunsthallen</a>
+                </li>
               </ul>
               <article class="info">
                 <article class="opens">
@@ -211,7 +225,7 @@
             </article>
           </article>
           <article class="sub-burger">
-            <button id="back">
+            <button id="back" class="hover-circle">
               <svg
                 width="8"
                 height="13"
@@ -229,13 +243,17 @@
             <article>
               <article class="tw-col-grid">
                 <ul class="sub-menu">
-                  <li class="burger-item"><a href="#">Praktisk info</a></li>
+                  <li class="burger-item hover-circle">
+                    <a href="#">Praktisk info</a>
+                  </li>
 
-                  <li class="burger-item"><a href="#">Apollo Bar</a></li>
-                  <li class="burger-item">
+                  <li class="burger-item hover-circle">
+                    <a href="#">Apollo Bar</a>
+                  </li>
+                  <li class="burger-item hover-circle">
                     <a href="events.html">Besøg vores Boghandel</a>
                   </li>
-                  <li class="burger-item">
+                  <li class="burger-item hover-circle">
                     <a href="#">Besøg vores Biograf</a>
                   </li>
                 </ul>
@@ -245,7 +263,7 @@
         </section>
       </nav>
     </header>
-    <main role="main" style="background-color: white">
+    <main role="main">
       <div id="circle"><p class="lead white">LÆS MERE</p></div>
       <section class="hero-wrapper main-grid">
         <section class="hero-section tw-col-grid">
@@ -253,15 +271,16 @@
             <span class="h1-span">OPLEV</span> KUNSTHAL CHARLOTTENBORG
           </h1>
           <article class="hero-intro">
-            <p class="paragrapgh">
+            <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
               suscipit ea? Suscipit ea modi perferendis fugiat accusamus ullam
               autem necessitatibus, voluptatibus nihil laborum tempora! Dolores
               dolorum temporibus recusandae illum unde!
             </p>
-            <setion class="hero-btns"
-              ><a href="#" class="btn-primary">Køb Entrébillet</a>
-              <a href="#" class="btn-secondary">Se Udstillinger</a></setion
+            <setion class="hero-btns">
+              <a href="#" class="btn-secondary hover-circle"
+                >Se Udstillinger</a
+              ></setion
             >
           </article>
           <section class="udstillinger-grid">
@@ -454,7 +473,9 @@
                 </a>
                 <!--Udstillings slut-->
               </article>
-              <a href="#" class="btn-primary btn-text">Udforsk Udstillinger</a>
+              <a href="#" class="btn-secondary hover-circle"
+                >Udforsk Udstillinger</a
+              >
             </article>
             <figure class="udstilling-img image-holder" id="change-on-hover">
               <figcaption class="fig-title">
@@ -547,7 +568,9 @@
                 internationalt udsyn, der omfatter kunst af såvel talenter som
                 etablerede stjerner fra både ind- og udland.
               </h2>
-              <a href="#" class="btn-secondary white">Læs mere om os</a>
+              <a href="#" class="btn-secondary hover-circle white"
+                >Læs mere om os</a
+              >
             </article>
           </section>
         </section>
@@ -648,6 +671,24 @@
             <li></li>
           </ul>
         </article>
+      </article>
+      <article class="form-wrapper">
+        <article class="form-text-wrapper">
+          <h2 class="second-title">Modtag alle nyheder</h2>
+          <p class="paragraph">
+            Er du interesseret i at få at vide hvornår nye udstillinger, events
+            og kunstnere kommer? Opskriv dig til vores nyhedsbrev her.
+          </p>
+        </article>
+        <form>
+          <label for="newsletter-form">Din Email</label>
+          <div>
+            <input id="newsletter-form" type="text" />
+            <button type="submit" class="btn-secondary white hover-circle">
+              Tilmeld Mig
+            </button>
+          </div>
+        </form>
       </article>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
