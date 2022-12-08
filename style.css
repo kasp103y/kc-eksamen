@@ -160,8 +160,9 @@ body.stop-scrolling {
 }
 
 .third-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-md);
   font-family: var(--sans-serif);
+  font-weight: 600;
 }
 
 .fourth-title {
@@ -214,6 +215,7 @@ body.stop-scrolling {
 .detail {
   font-size: var(--font-size-sm);
   font-family: var(--sans-serif);
+  font-weight: 300;
 }
 
 .link-title {
@@ -1028,11 +1030,24 @@ video {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  color: var(--primary-light);
+}
+
+.featured-ex p:last-of-type {
+  margin-bottom: var(--spacing-8);
 }
 /****************************************************************** Tablet *************************************************************************/
 
 @media screen and (min-width: 850px) {
   /* Tablet styling goes here  */
+
+  .paragraph-title h3 {
+    min-width: 100px;
+  }
+
+  .paragraph-title {
+    width: 700px;
+  }
 
   .info-item p {
     min-width: 250px;
@@ -1274,7 +1289,7 @@ video {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    gap: var(--spacing-5);
+    gap: var(--spacing-3);
   }
 
   .udstilling-grid,
@@ -1445,10 +1460,83 @@ video {
   } */
 }
 
+.udstilling-grid {
+  background-color: var(--dark-300);
+}
+
+a.udstilling-grid:first-child {
+  background-image: url("billeder/eye.jpg");
+  aspect-ratio: 1/1;
+  background-size: cover;
+}
+
+a.udstilling-grid:nth-child(2) {
+  background-image: url("billeder/beardy.jpg");
+  aspect-ratio: 3/5;
+  background-size: cover;
+}
+
+a.udstilling-grid:nth-child(3) {
+  background-image: url("billeder/post-cap.jpg");
+  aspect-ratio: 3/5;
+  background-size: cover;
+}
+
+a.udstilling-grid:nth-child(4) {
+  background-image: url("billeder/post-cap-2.jpg");
+  aspect-ratio: 3/5;
+  background-size: cover;
+}
+
+a.udstilling-grid:last-child {
+  background-image: url("billeder/cao-fei-2.jpg");
+  aspect-ratio: 1/1;
+  background-size: cover;
+}
+
+.udstilling-grid {
+  position: relative;
+}
+
+.udstilling-text {
+  z-index: 2;
+  position: relative;
+  opacity: 0;
+  margin: var(--spacing-6);
+  transition: var(--easing);
+}
+
+.udstilling-text p:first-of-type {
+  margin-top: var(--spacing-3);
+}
+
+.udstilling-text p:last-of-type {
+  margin-top: var(--spacing-2);
+}
+
+div.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  transition: var(--easing);
+}
+
 /****************************************************************** Hovers *************************************************************************/
 
 @media screen and (min-width: 1000px) {
   /* Desktop styling goes here  */
+
+  .udstilling-grid:hover .overlay {
+    opacity: 0.6;
+  }
+
+  .udstilling-grid:hover .udstilling-text {
+    opacity: 1;
+  }
 
   .menu-item a::after {
     content: "";
