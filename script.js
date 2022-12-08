@@ -31,46 +31,7 @@ function start() {
     input.value = parseInt(input.value) - 1;
   }); */
 
-  const minusBtn = document.querySelectorAll(".subtract");
-  const plusBtn = document.querySelectorAll(".add");
-  const numberPlace = document.querySelector("p.counter");
-  let number = 0; /// number value
-  let min = 0; /// min number
-  let max = 12; /// max number
-
-  minusBtn.forEach((el, index) => {
-    el.addEventListener("click", () => {
-      if (number > min) {
-        number = number - 1; /// Minus 1 of the number
-        numberPlace[index].innerHTML = number; /// Display the value in place of the number
-      }
-      if (number == min) {
-        numberPlace[index].style.color = "red";
-        setTimeout(function () {
-          numberPlace[index].style.color = "black";
-        }, 500);
-      } else {
-        numberPlace[index].style.color = "black";
-      }
-    });
-  });
-
-  plusBtn.forEach((el, index) => {
-    el.addEventListener("click", () => {
-      if (number < max) {
-        number = number + 1;
-        numberPlace[index].innerHTML = number; /// Display the value in place of the number
-      }
-      if (number == max) {
-        numberPlace[index].style.color = "red";
-        setTimeout(function () {
-          numberPlace[index].style.color = "black";
-        }, 500);
-      } else {
-        numberPlace[index].style.color = "black";
-      }
-    });
-  });
+  //Burger
 
   burgerIcon.addEventListener("click", burgerOnClick);
   const subBurgerBtn = document.querySelector(".sub-burger-btn");

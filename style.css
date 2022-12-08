@@ -101,13 +101,37 @@ body.stop-scrolling {
   padding-block: var(--spacing-10);
 }
 
+.margin-bottom {
+  margin-bottom: var(--spacing-4);
+}
+
+.page-title {
+  margin-bottom: var(--spacing-9);
+  margin-top: var(--spacing-6);
+  max-width: 600px;
+}
+
+.phone-form {
+  position: relative;
+}
+
+#select-country {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  height: 40px;
+  border-radius: 9999px;
+  border: none;
+  padding: 20px;
+  color: var(--dark-800);
+}
 /****************************************************************** General styling **********************************************************************/
 
 /*** Text styles ***/
 
 .display-heading {
   font-size: var(--font-size-xxxxl);
-  margin-bottom: var(--spacing-8);
+
   font-family: ivypresto-headline, serif;
   font-weight: 300;
   font-style: normal;
@@ -424,9 +448,10 @@ header.mix-blend {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100vw;
+
   min-height: 100vh;
   padding-top: var(--spacing-10);
+  grid-column: 2/3;
   /*  justify-content: space-around; */
 }
 
@@ -445,6 +470,10 @@ header.mix-blend {
 .info-item p {
   width: 200px;
   justify-self: start;
+}
+
+.info-item p:first-child {
+  font-weight: 600;
 }
 
 .burger .info {
@@ -502,9 +531,35 @@ footer {
   padding: var(--btn-padding);
   border-radius: 999px;
   transition: var(--easing);
+  font-weight: 400;
   font-family: var(--sans-serif);
   font-size: var(--font-size-md);
   cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-solid-black {
+  padding: var(--btn-padding);
+  border-radius: 999px;
+  transition: var(--easing);
+  font-weight: 400;
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  color: var(--primary-light);
+  background-color: var(--dark-800);
+}
+
+.btn-tetriary {
+  padding-block: 20px;
+  border-radius: 999px;
+  transition: var(--easing);
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  font-weight: 400;
+  background-color: transparent;
+  text-align: center;
 }
 
 /* .btn-primary {
@@ -748,6 +803,16 @@ h3.name {
   display: flex;
   gap: var(--spacing-4);
   justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bread-crumbs p {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.bread-crumbs svg path {
+  fill: #7e7b7b;
 }
 
 .bread-crumbs .inaktiv {
@@ -769,13 +834,21 @@ h3.name {
   border-bottom: var(--border-thick-black);
 }
 
-#counter {
+#counter,
+#counter-var {
   color: var(--dark-800);
   height: 48px;
   width: 48px;
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+input.counter {
+  appearance: none;
+  -wekit-appearance: none;
+  border: none;
+  background-color: transparent;
 }
 
 .button-counter {
@@ -816,8 +889,9 @@ h3.name {
 
 .btn-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
+  gap: var(--spacing-6);
 }
 
 /* input:invalid + span::after {
@@ -855,6 +929,7 @@ input:valid + span::after {
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
+  align-items: center;
 }
 form .checkbox:first-of-type {
   margin-top: var(--spacing-6);
@@ -868,10 +943,24 @@ form .checkbox:last-of-type {
   text-align: start;
 }
 
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
 .checkbox label,
 .payment-form label {
   margin: 0;
   padding: 0;
+}
+
+.checkbox input,
+.payment-form input {
+  height: 24px;
+  width: 24px;
 }
 
 .payment-form .checkbox {
@@ -881,6 +970,7 @@ form .checkbox:last-of-type {
 .payment-opt {
   display: flex;
   gap: var(--spacing-4);
+  align-items: center;
 }
 
 .checkbox label input[type="checkbox"] {
@@ -888,13 +978,87 @@ form .checkbox:last-of-type {
   height: 24px;
   margin-inline-end: var(--spacing-4);
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* input:invalid {
+  border: red solid 4px;
+} */
+
+.button-wrapper-check {
+  display: flex;
+  flex-direction: column;
+}
+
+.bread-crumbs {
+  max-width: 400px;
+}
+
+.sub-head {
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-6);
+  font-weight: 300;
+}
+
+video {
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.video-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.featured-ex {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
 /****************************************************************** Tablet *************************************************************************/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 850px) {
   /* Tablet styling goes here  */
+
+  .info-item p {
+    min-width: 250px;
+    justify-self: start;
+  }
+
+  .prod-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-8);
+    min-width: none;
+  }
+
+  .info .priser {
+    min-width: 550px;
+  }
+
   .main-grid {
     display: grid;
     grid-template-columns: 5% 1fr 10%;
+    padding-inline: 0;
+  }
+
+  .bread-crumbs {
+    max-width: 500px;
   }
 
   .main-wrapper {
@@ -942,7 +1106,7 @@ form .checkbox:last-of-type {
   }
 
   .burger-wrapper {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .burger-wrapper {
@@ -958,12 +1122,38 @@ form .checkbox:last-of-type {
   .burger-item button {
     font-size: var(--font-size-xxl);
   }
+
+  .ticket-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 500px;
+    margin-right: var(--spacing-4);
+  }
 }
 
 /****************************************************************** Desktop ************************************************************************/
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   /* Desktop styling goes here  */
+
+  .info-item p {
+    min-width: 350px;
+    justify-self: start;
+  }
+
+  .ticket-info {
+    min-width: 800px;
+  }
+
+  .check-out-form {
+    display: flex;
+    width: 100%;
+    gap: var(--spacing-10);
+  }
+  .check-wrapper {
+    width: 100%;
+  }
 
   .coop-section article {
     display: grid;
@@ -1058,7 +1248,7 @@ form .checkbox:last-of-type {
 
   .main-grid {
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 15% 1fr 15%;
   }
 
   .main-wrapper {
