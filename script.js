@@ -5,8 +5,8 @@ function start() {
   const burgerMenu = document.querySelector(".burger");
   const header = document.querySelector("header");
   const deBody = document.querySelector("body");
-  const dropdown = document.querySelector(".drop-down");
-  const dropdownBtn = document.querySelector("#drop-down");
+  /*  const dropdown = document.querySelector(".drop-down");
+  const dropdownBtn = document.querySelector("#drop-down"); */
 
   /*  dropdownBtn.addEventListener("mouseover", showDropdown);
   dropdownBtn.addEventListener("mouseout", hideDropdown);
@@ -18,6 +18,59 @@ function start() {
     dropdown.classList.toggle("open-down");
   }
  */
+
+  /*   let btnAdd = document.querySelector("#add");
+  let btnSubtract = document.querySelector("#subtract");
+  let input = document.querySelector("#counter");
+
+  btnAdd.addEventListener("click", () => {
+    input.value = parseInt(input.value) + 1;
+  });
+
+  btnSubtract.addEventListener("click", () => {
+    input.value = parseInt(input.value) - 1;
+  }); */
+
+  const minusBtn = document.querySelectorAll(".subtract");
+  const plusBtn = document.querySelectorAll(".add");
+  const numberPlace = document.querySelector("p.counter");
+  let number = 0; /// number value
+  let min = 0; /// min number
+  let max = 12; /// max number
+
+  minusBtn.forEach((el, index) => {
+    el.addEventListener("click", () => {
+      if (number > min) {
+        number = number - 1; /// Minus 1 of the number
+        numberPlace[index].innerHTML = number; /// Display the value in place of the number
+      }
+      if (number == min) {
+        numberPlace[index].style.color = "red";
+        setTimeout(function () {
+          numberPlace[index].style.color = "black";
+        }, 500);
+      } else {
+        numberPlace[index].style.color = "black";
+      }
+    });
+  });
+
+  plusBtn.forEach((el, index) => {
+    el.addEventListener("click", () => {
+      if (number < max) {
+        number = number + 1;
+        numberPlace[index].innerHTML = number; /// Display the value in place of the number
+      }
+      if (number == max) {
+        numberPlace[index].style.color = "red";
+        setTimeout(function () {
+          numberPlace[index].style.color = "black";
+        }, 500);
+      } else {
+        numberPlace[index].style.color = "black";
+      }
+    });
+  });
 
   burgerIcon.addEventListener("click", burgerOnClick);
   const subBurgerBtn = document.querySelector(".sub-burger-btn");
