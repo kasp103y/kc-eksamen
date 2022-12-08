@@ -236,6 +236,10 @@ a {
   background-color: var(--bg-color);
 }
 
+.main-wrapper.black {
+  background-color: var(--dark-800);
+}
+
 header.main-grid {
   background-color: transparent;
 }
@@ -853,8 +857,8 @@ h3.name {
   }
 
   #cursor.vis-var {
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     background-color: var(--bg-color);
     display: grid;
     place-items: center;

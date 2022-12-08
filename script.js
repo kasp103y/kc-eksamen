@@ -24,7 +24,7 @@ function start() {
   const subBurger = document.querySelector(".sub-burger");
   const lukSub = document.querySelector("#back");
 
-  dropdownBtn.addEventListener("click", showDropdown);
+  /*  dropdownBtn.addEventListener("click", showDropdown);
   lukSub.addEventListener("click", hideDropdown);
 
   function showDropdown() {
@@ -34,7 +34,7 @@ function start() {
   function hideDropdown() {
     subBurger.classList.toggle("open");
     header.classList.toggle("mix-blend");
-  }
+  } */
 
   function burgerOnClick() {
     burgerMenu.classList.toggle("open");
