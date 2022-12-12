@@ -661,6 +661,10 @@ h3.name {
   margin-block: var(--spacing-6);
 }
 
+.filter-buttons {
+  overflow-x: scroll;
+}
+
 .filter-btn {
   border: none;
   background-color: transparent;

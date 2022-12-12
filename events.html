@@ -435,7 +435,7 @@
           klon.querySelector(".hvor").textContent = event.hvor;
           klon.querySelector(".lokation").textContent = event.lokation;
           klon.querySelector(".event-button").addEventListener("click", () => {
-            location.href = "event-single-view.html?id=" + event._id;
+            location.href = "event-single-view.html?id=" + event.id;
           });
 
           eventContainer.appendChild(klon);

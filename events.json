@@ -1,18 +1,18 @@
 [
   {
-    "id": "001",
+    "id": "cao-fei",
     "name": "CAO FEI/POST CAPITAL/DIGTIAL MATTER",
     "title": "Gratis omvisninger i efteråret",
     "dates": "17 SEP - 19 FEB",
     "time": "17.00 - 20.00",
-    "kategori": ["Rundvisninger", "Talks"],
+    "kategori": "Rundvisninger",
     "label": "DENNE UGE",
     "hvor": "Event på Facebook",
     "lokation": "KUNSTHAL CHARLOTTENBORG"
   },
 
   {
-    "id": "002",
+    "id": "smurp",
     "name": "Smurp My Nurps",
     "title": "These Nurps aint for smurpin sucka",
     "dates": "22 OKT - 69 DEC",
@@ -24,7 +24,7 @@
   },
 
   {
-    "id": "003",
+    "id": "nurp",
     "name": "Smurp My Nurps",
     "title": "These Nurps aint for smurpin sucka",
     "dates": "22 OKT - 69 DEC",
@@ -36,7 +36,7 @@
   },
 
   {
-    "id": "004",
+    "id": "flep",
     "name": "Smurp My Nurps",
     "title": "These Nurps aint for smurpin sucka",
     "dates": "22 OKT - 69 DEC",
@@ -48,7 +48,7 @@
   },
 
   {
-    "id": "005",
+    "id": "floop",
     "name": "Smurp My Nurps",
     "title": "These Nurps aint for smurpin sucka",
     "dates": "22 OKT - 69 DEC",
