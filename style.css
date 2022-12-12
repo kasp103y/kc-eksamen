@@ -78,6 +78,7 @@
 html {
   font-family: var(--sans-serif);
   font-weight: var(--paragraph-weight);
+  color: var(--dark-800);
 }
 
 img {
@@ -125,6 +126,10 @@ body.stop-scrolling {
   border: none;
   padding: 20px;
   color: var(--dark-800);
+}
+
+.dark {
+  color: var(--primary-light);
 }
 /****************************************************************** General styling **********************************************************************/
 
@@ -664,11 +669,44 @@ h3.name {
 
 /*Event frontapge mobil module */
 
-.filter-buttons .filter {
+.filter {
   display: flex;
   overflow-x: auto;
   gap: var(--spacing-6);
   margin-block: var(--spacing-6);
+  padding-block: var(--spacing-4);
+  height: 100px;
+}
+
+.filter:after {
+  content: "";
+  top: 0;
+  left: 68%;
+  position: absolute;
+
+  height: 100px;
+  width: 220px;
+  background: rgb(250, 249, 248);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 249, 248, 0) 0%,
+    rgba(250, 249, 248, 1) 51%
+  );
+}
+
+.filter:before {
+  position: fixed;
+  top: 0;
+  left: -68%;
+  content: "";
+  height: 100%;
+  width: 220px;
+  background: rgb(250, 249, 248);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 249, 248, 0) 0%,
+    rgba(250, 249, 248, 1) 51%
+  );
 }
 
 .filter-buttons {
@@ -689,15 +727,16 @@ h3.name {
   width: 100%;
   background-color: transparent;
   text-align: left;
-  border-block: var(--border-thick-black);
+  border-top: var(--border-thick-black);
   border-inline: none;
   padding-block: var(--spacing-4);
-  margin-bottom: -1px;
+
   cursor: pointer;
 }
 
 .event-button article:nth-child(1) {
   display: flex;
+  flex-flow: wrap;
   gap: var(--spacing-4);
   margin-bottom: var(--spacing-2);
   justify-content: start;
@@ -1166,10 +1205,30 @@ a.udstilling-grid {
   display: block;
 }
 
+.max-width-p {
+  max-width: 800px;
+}
+
+.heading-margin {
+  margin-bottom: var(--spacing-8);
+}
+
 /****************************************************************** Tablet *************************************************************************/
 
 @media screen and (min-width: 750px) {
   /* Tablet styling goes here  */
+
+  .btn-secondary {
+    display: inline-block;
+  }
+
+  .btn-solid-black {
+    display: inline-block;
+  }
+
+  .btn-tetriary {
+    display: inline-block;
+  }
 
   .main-title {
     font-size: var(--font-size-xxxl);
