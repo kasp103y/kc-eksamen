@@ -148,11 +148,10 @@ body.stop-scrolling {
 }
 
 .second-title {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-family: var(--serif);
   font-weight: 400;
   font-style: normal;
-  margin-bottom: var(--spacing-6);
 }
 
 .burger-item a {
@@ -161,14 +160,15 @@ body.stop-scrolling {
 }
 
 .third-title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-family: var(--sans-serif);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .fourth-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-family: var(--sans-serif);
+  font-weight: 500;
 }
 
 .fifth-title {
@@ -209,6 +209,13 @@ body.stop-scrolling {
 
 .paragraph {
   font-size: var(--font-size-md);
+  font-family: var(--sans-serif);
+  font-weight: var(--paragraph-weight);
+}
+
+.paragraph a {
+  font-size: var(--font-size-md);
+  text-decoration: underline 2px black;
   font-family: var(--sans-serif);
   font-weight: var(--paragraph-weight);
 }
@@ -545,7 +552,8 @@ footer {
   font-size: var(--font-size-md);
   cursor: pointer;
   background-color: transparent;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 .btn-solid-black {
@@ -558,7 +566,8 @@ footer {
   cursor: pointer;
   color: var(--primary-light);
   background-color: var(--dark-800);
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 .btn-tetriary {
@@ -571,7 +580,8 @@ footer {
   font-weight: 400;
   background-color: transparent;
   text-align: center;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 /* .btn-primary {
@@ -1165,6 +1175,10 @@ a.udstilling-grid {
     font-size: var(--font-size-xxxl);
 
     font-weight: 400;
+  }
+
+  .second-title {
+    font-size: var(--font-size-xxxl);
   }
 
   .paragraph-title h3 {

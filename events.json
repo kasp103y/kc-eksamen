@@ -8,7 +8,25 @@
     "kategori": "Rundvisninger",
     "label": "DENNE UGE",
     "hvor": "Event på Facebook",
-    "lokation": "KUNSTHAL CHARLOTTENBORG"
+    "lokation": "KUNSTHAL CHARLOTTENBORG",
+    "para": "Kom med til gratis omvisning på Kunsthal Charlottenborg hver onsdag aften i løbet af efteråret, hvor en af vores kunstværter vil introducere kunsthallens aktuelle udstillinger: Post Capital, Asia One af Cao Fei samt Digital Matters af Honey Biba Beckerlee. <br> Rundvisningen varer 1 time og foregår på dansk",
+    "subtitle": "Rundvisningen består af følgende udstillinger",
+    "beskrivelse1": "Gruppeudstillingen Post Capital sammenstiller værker af 21 internationale samtidskunstnere i en lang række udtryksformer, der kredser om produktionen, forbruget og rigdommens væsen. <a href=\"#\">Læs om Post Capital her</a>.",
+    "link1": "#",
+    "beskrivelse2": "Udstillingen Asia One af kunstneren Cao Fei reflekterer over den omfattende udvikling, der finder sted i det kinesiske samfund og som har været med til at forme hendes generation. Udstillingen præsenterer iscenesatte filmværker, der portrætterer et Kina, der er splittet mellem fortid og nutid, mellem historie og længslen efter det nye. <a href=\"#\">Læs om Cao Fei her</a>.",
+    "link2": "#",
+    "beskrivelse3": "Honey Biba Beckerlees udstilling Digital Matters undersøger forbindelser på tværs af geologi, teknologi og biologi, og kortlægger grundstoffernes bevægelse fra naturen ind i computeren og videre ind i menneskekroppen. <a href=\"#\">Læs om Digital Matters her</a>.",
+    "link3": "#",
+    "whendesc": "Hver onsdag <br> mellem d. 17 Jan - 20 Feb",
+    "wheredesc": "Kunsthal Charlottenborg <br> Kongens Nytorv 1, 1050 København",
+    "pricedesc": "Gratis  når du køber entré til Kunsthallen. <br> Entre er gratis mellem 17.00 og 20.00",
+    "timedesc": "Rundvisningen sker mellem 18.00 - 19.00 <br> Rundvisningen foregår på dansk",
+    "img": "cao-fei.jpg",
+    "altimg": "Cao Fei udstilling",
+    "figcap": "CAO FEI",
+    "ptitle1": "POST CAPITAL",
+    "ptitle2": "ASIA ONE",
+    "ptitle3": "DIGITAL MATTER"
   },
 
   {
