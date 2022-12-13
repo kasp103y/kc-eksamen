@@ -296,7 +296,7 @@
           id="single_container"
         >
           <nav>
-            <button class="back hover-circle">
+            <button class="back hover-circle" id="ses">
               <svg
                 width="20"
                 height="12"
@@ -610,7 +610,7 @@
       document.querySelector(".fig-cap").innerHTML = entry.figcap;
     }
 
-    document.querySelector(".back").addEventListener("click", () => {
+    document.querySelector("#ses").addEventListener("click", () => {
       window.history.back();
     });
   </script>
