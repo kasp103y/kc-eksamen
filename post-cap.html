@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta name="robots" content="noindex" />
     <meta charset="UTF-8" />
@@ -17,11 +17,12 @@
     <script src="script.js" defer></script>
     <title>KUNSTHAL CHARLOTTENBORG | fed titel</title>
   </head>
-  <body>
+  <body class="smooth-scroll">
     <div id="cursor">
       <div id="cta"><p>Læs mere</p></div>
     </div>
     <header class="main-grid mix-blend">
+      <!--   /*   "img": "<img alt=\"Cao-fei udstilling\" src=\"billeder/cao-fei.jpg\"> ", */ -->
       <nav role="navigation">
         <figure class="logo hover-circle">
           <a href="index.html">
@@ -46,9 +47,7 @@
         </figure>
         <section class="nav-wrapper">
           <ul class="menu">
-            <li class="menu-item hover-circle">
-              <a href="udstillinger.html">Udstillinger</a>
-            </li>
+            <li class="menu-item hover-circle"><a href="#">Udstillinger</a></li>
             <li class="menu-item hover-circle" id="drop-down">
               <a href="#">Besøg Kunsthallen</a>
               <!--  <ul class="drop-down">
@@ -73,12 +72,9 @@
             <article class="burger-wrapper">
               <ul class="sub-menu">
                 <li class="burger-item hover-circle">
-                  <a href="udstillinger.html">Udstillinger</a>
+                  <a href="#">Udstillinger</a>
                 </li>
-                <li
-                  class="burger-item hover-circle sub-burger-btn"
-                  aria-expanded="false"
-                >
+                <li class="burger-item hover-circle sub-burger-btn">
                   <button href="#">
                     Besøg kunsthallen
                     <svg
@@ -96,16 +92,16 @@
                   </button>
                 </li>
                 <li class="burger-item hover-circle">
-                  <a href="shop.html">Årskort & billetter</a>
+                  <a href="#">Årskort & billetter</a>
                 </li>
                 <li class="burger-item hover-circle">
                   <a href="events.html">Events</a>
                 </li>
                 <li class="burger-item hover-circle">
-                  <a href="nyheder.html">Nyheder</a>
+                  <a href="#">Nyheder</a>
                 </li>
                 <li class="burger-item hover-circle">
-                  <a href="kontakt.html">Kontakt Kunsthallen</a>
+                  <a href="#">Kontakt Kunsthallen</a>
                 </li>
               </ul>
               <article class="info">
@@ -273,330 +269,29 @@
         </section>
       </nav>
     </header>
-
     <main role="main">
-      <section class="main-grid">
-        <section
-          class="container main-wrapper padding-block"
-          id="single_container"
-        >
-          <nav>
-            <button class="back hover-circle">
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 20 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 12L7.4 10.55L3.85 7H20V5H3.85L7.4 1.45L6 0L0 6L6 12Z"
-                  fill="black"
-                /></svg
-              >Tilbage til events
-            </button>
-          </nav>
-          <article class="event-intro-txt">
-            <article class="event-container">
-              <h2 class="single-h2 second-title">Lorem, ipsum dolor.</h2>
-              <h3 class="sub-title third-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, quasi.
-              </h3>
-              <p class="intro-description paragraph max-width-p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Laborum aspernatur a aperiam consectetur error rem
-                exercitationem recusandae aliquam illum aut!
-              </p>
-            </article>
-            <article><p class="tag">lorem</p></article>
-            <article class="event-info">
-              <ul>
-                <li>
-                  <p class="fourth-title">Hvornår?</p>
-                  <p class="when-info paragraph">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Perferendis, suscipit.
-                  </p>
-                </li>
-                <li>
-                  <p class="fourth-title">Tidsrum</p>
-                  <p class="time-info paragraph">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Perferendis, suscipit.
-                  </p>
-                </li>
-                <li>
-                  <p class="fourth-title">Hvor?</p>
-                  <p class="where-info paragraph">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam, illo.
-                  </p>
-                </li>
-                <li>
-                  <p class="fourth-title">Pris?</p>
-                  <p class="price-info paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Officia, hic.
-                  </p>
-                </li>
-              </ul>
-              <a class="btn-secondary event-link hover-circle" href="#"
-                >Tilmeld på Facebook</a
-              >
-            </article>
+      <section class="main-grid padding-block">
+        <section class="main-wrapper tw-col-grid">
+          <article class="featured-ex black">
+            <p>17 SEP – 19 FEB 2023</p>
+            <h1 class="display-heading">POST CAPITAL</h1>
+            <p>Art and the Economics of the Digital Age</p>
           </article>
+          <section class="video-wrapper-var">
+            <section id="single-video">
+              <video autoplay muted loop>
+                <source src="billeder/place-holder.mp4" type="video/mp4" />
+              </video>
+            </section>
+          </section>
         </section>
       </section>
-      <section class="main-grid black">
-        <section class="desc-img black padding-block main-wrapper">
-          <article class="long-description">
-            <h3 class="third-title title-me-up">Lorem, ipsum dolor.</h3>
-            <p class="fourth-title p-title-one"></p>
-            <p class="paragraph desc-one"></p>
-            <p class="fourth-title p-title-two"></p>
-            <p class="paragraph desc-two"></p>
-            <p class="fourth-title p-title-three"></p>
-            <p class="paragraph desc-three"></p>
-          </article>
-          <figure>
-            <img class="img-container" src="" alt="" />
-            <figcaption class="fig-cap"></figcaption>
-          </figure>
-        </section>
-      </section>
-      <section class="main-grid">
-        <section
-          class="event-container main-wrapper main-content blur-rest padding-block"
-        >
-          <h2 class="second-title heading-margin">Måske ville du synes om</h2>
-          <a href="#" aria-label="event" class="event-button blur-us">
-            <article>
-              <p class="label outline-label detail">Hello</p>
-              <p class="lokation outline-label detail">Buddy</p>
-              <p class="kategori detail">Whats</p>
-            </article>
-            <article>
-              <h3 class="name paragraph">Poppin?</h3>
-              <p class="title paragraph">My guy</p>
-            </article>
-            <article>
-              <p class="hvor paragraph">Lige her</p>
-              <article class="date-time">
-                <article>
-                  <p class="dates paragraph">Ses</p>
-                  <p class="time paragraph">Bro</p>
-                </article>
-                <div class="arrow">
-                  <svg
-                    width="54"
-                    height="17"
-                    viewBox="0 0 54 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 8.71429H53M53 8.71429L44.7829 1M53 8.71429L44.7829 16"
-                      stroke="black"
-                    />
-                  </svg>
-                </div>
-              </article>
-            </article>
-          </a>
-          <a href="#" aria-label="event" class="event-button blur-us">
-            <article>
-              <p class="label outline-label detail">Hello</p>
-              <p class="lokation outline-label detail">Buddy</p>
-              <p class="kategori detail">Whats</p>
-            </article>
-            <article>
-              <h3 class="name paragraph">Poppin?</h3>
-              <p class="title paragraph">My guy</p>
-            </article>
-            <article>
-              <p class="hvor paragraph">Lige her</p>
-              <article class="date-time">
-                <article>
-                  <p class="dates paragraph">Ses</p>
-                  <p class="time paragraph">Bro</p>
-                </article>
-                <div class="arrow">
-                  <svg
-                    width="54"
-                    height="17"
-                    viewBox="0 0 54 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 8.71429H53M53 8.71429L44.7829 1M53 8.71429L44.7829 16"
-                      stroke="black"
-                    />
-                  </svg>
-                </div>
-              </article>
-            </article>
-          </a>
-        </section>
+
+      <section></section>
+      <section class="main-wrapper padding-block"></section>
+      <section class="main-wrapper">
+        <section class="udstillinger-grid loop margin-bottom"></section>
       </section>
     </main>
   </body>
-
-  <style>
-    .sub-title {
-      margin-bottom: var(--spacing-5);
-      margin-top: var(--spacing-4);
-    }
-
-    .back {
-      position: fixed;
-      top: 85%;
-      left: 70%;
-      border-radius: 9999px;
-      background-color: var(--dark-800);
-      color: var(--primary-light);
-      border: var(--border-thin-white);
-      font-family: var(--serif);
-      font-size: var(--font-size-md);
-      height: 100px;
-      width: 100px;
-      cursor: pointer;
-    }
-
-    .back svg {
-      display: none;
-    }
-
-    .event-info {
-      border-top: var(--border-thin-black);
-      padding-block: var(--spacing-4);
-      margin-block: var(--spacing-1);
-    }
-
-    .tag {
-      margin-top: var(--spacing-4);
-    }
-
-    .event-info .btn-secondary {
-      margin-block: var(--spacing-4);
-    }
-
-    .event-info ul li {
-      margin-block: var(--spacing-4);
-    }
-
-    .event-info ul li p:first-child {
-      margin-bottom: var(--spacing-2);
-    }
-
-    .event-info ul {
-      margin-bottom: var(--spacing-4);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: var(--spacing-8);
-    }
-
-    .long-description h3 {
-      margin-block: var(--spacing-5);
-    }
-
-    .long-description p {
-      margin-block: var(--spacing-4);
-    }
-
-    .desc-img {
-      background-color: var(--dark-800);
-      color: var(--primary-light);
-    }
-
-    @media screen and (min-width: 1100px) {
-      .desc-img {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-6);
-        color: var(--primary-light);
-        align-items: center;
-      }
-
-      .desc-img figure {
-        grid-column: 2/3;
-      }
-      .desc-img article {
-        grid-column: 1/2;
-      }
-
-      .back {
-        position: static;
-        display: flex;
-        border-radius: 0;
-        border: none;
-        background-color: transparent;
-        color: var(--dark-800);
-        font-family: var(--serif);
-        font-size: var(--font-size-md);
-        height: 100%;
-        width: fit-content;
-        cursor: pointer;
-        align-items: center;
-        gap: var(--spacing-2);
-        border-bottom: var(--border-thin-black);
-        margin-bottom: var(--spacing-4);
-      }
-
-      .back svg {
-        display: block;
-      }
-    }
-  </style>
-
-  <script>
-    //const header = document.querySelector("header h2");
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
-    const eventJSON = "events.json";
-    let event;
-    let entry;
-
-    /* hentData(eventJSON, id); */
-
-    console.log(id);
-    document.addEventListener("DOMContentLoaded", hentData);
-
-    async function hentData(event) {
-      //Promise - data lover program at komme med data, imen det køre videre
-      const result = await fetch(eventJSON);
-      event = await result.json();
-      const entry = event.find((el) => el.id === id);
-      console.log(entry);
-      vis(entry);
-    }
-
-    function vis(entry) {
-      document.querySelector(".single-h2").innerHTML = entry.name;
-      document.querySelector(".sub-title").innerHTML = entry.title;
-      document.querySelector(".intro-description").innerHTML = entry.para;
-      document.querySelector(".tag").innerHTML = entry.kategori;
-      document.querySelector(".when-info").innerHTML = entry.whendesc;
-      document.querySelector(".where-info").innerHTML = entry.wheredesc;
-      document.querySelector(".time-info").innerHTML = entry.timedesc;
-      document.querySelector(".price-info").innerHTML = entry.pricedesc;
-      document.querySelector(".desc-one").innerHTML = entry.beskrivelse1;
-      document.querySelector(".p-title-one").innerHTML = entry.ptitle1;
-      document.querySelector(".p-title-two").innerHTML = entry.ptitle2;
-      document.querySelector(".p-title-three").innerHTML = entry.ptitle3;
-      document.querySelector(".desc-two").innerHTML = entry.beskrivelse2;
-      document.querySelector(".desc-three").innerHTML = entry.beskrivelse3;
-      document.querySelector(".title-me-up").innerHTML = entry.subtitle;
-      document.querySelector(".img-container").src = "billeder/" + entry.img;
-      document.querySelector(".img-container").alt = entry.altimg;
-      document.querySelector(".fig-cap").innerHTML = entry.figcap;
-    }
-
-    document.querySelector(".back").addEventListener("click", () => {
-      window.history.back();
-    });
-  </script>
 </html>

@@ -55,6 +55,16 @@ function start() {
     burgerIcon.classList.toggle("close-icon");
     deBody.classList.toggle("stop-scrolling");
 
+    let ariaEx = burgerIcon.getAttribute("aria-expanded");
+
+    if (ariaEx == "false") {
+      ariaEx = "true";
+    } else {
+      ariaEx = "false";
+    }
+    burgerIcon.setAttribute("aria-expanded", ariaEx);
+    subBurgerBtn.setAttribute("aria-expanded", "false");
+
     header.classList.toggle("mix-blend");
 
     subBurger.classList.remove("open");
@@ -62,8 +72,12 @@ function start() {
     subBurgerBtn.addEventListener("click", () => {
       subBurger.classList.add("open");
 
+      subBurgerBtn.setAttribute("aria-expanded", "true");
+
       lukSub.addEventListener("click", () => {
         subBurger.classList.remove("open");
+
+        subBurgerBtn.setAttribute("aria-expanded", "false");
       });
     });
 
