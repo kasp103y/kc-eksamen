@@ -105,7 +105,7 @@ body.stop-scrolling {
 }
 
 .padding-block {
-  padding-block: var(--spacing-10);
+  padding-block: var(--spacing-9);
 }
 
 .margin-bottom {
@@ -187,8 +187,9 @@ body.stop-scrolling {
 }
 
 .fifth-title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-base);
   font-family: var(--sans-serif);
+  font-weight: 400;
 }
 
 .lead {
@@ -1149,8 +1150,12 @@ video {
 }
 
 .video-wrapper-var {
-  grid-column: 6/12;
+  grid-column: 1/13;
   grid-row: 2/3;
+}
+
+.udstilling-desc p {
+  margin-bottom: var(--spacing-6);
 }
 
 .featured-ex {
@@ -1167,9 +1172,16 @@ video {
   grid-row: 1/2;
 }
 
+.udstilling-desc {
+  grid-column: 1/13;
+  grid-row: 3/4;
+}
+
 #single-video video {
   aspect-ratio: 16/9;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-ex a {
@@ -1290,10 +1302,57 @@ a.udstilling-grid {
 .event-info ul li {
   min-width: 300px;
 }
+
+.tw-col-grid {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.about-artist,
+.about-exhibition {
+  border-top: var(--border-thin-black);
+  margin-top: var(--spacing-8);
+}
+
+.the-artists {
+  display: flex;
+  margin-top: var(--spacing-6);
+  gap: var(--spacing-3);
+}
+
+.about-artist figure img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.ex-title {
+  margin-block: var(--spacing-3);
+}
+
 /****************************************************************** Tablet *************************************************************************/
 
 @media screen and (min-width: 750px) {
   /* Tablet styling goes here  */
+
+  .video-wrapper-var {
+    grid-column: 6/13;
+    grid-row: 2/3;
+  }
+
+  #single-video video {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100vw;
+    height: 70vh;
+  }
+
+  .udstilling-desc {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    align-self: center;
+  }
 
   .event-info ul li {
     min-width: 0;
@@ -1432,6 +1491,10 @@ a.udstilling-grid {
 
 @media screen and (min-width: 1100px) {
   /* Desktop styling goes here  */
+
+  .padding-block {
+    padding-block: var(--spacing-10);
+  }
 
   .footer-nav article {
     min-width: 300px;
@@ -1605,13 +1668,6 @@ a.udstilling-grid {
   }
 
   /*GRIDS*/
-
-  .tw-col-grid {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-template-columns: repeat(12, 1fr);
-  }
 
   .main-grid {
     display: grid;
