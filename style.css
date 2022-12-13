@@ -291,7 +291,6 @@ a {
 .main-grid {
   display: grid;
   grid-template-columns: 12px 1fr 12px;
-  background-color: var(--bg-color);
 }
 
 .main-wrapper {
@@ -303,9 +302,10 @@ a {
   background-color: var(--dark-800);
 }
 
-header.main-grid {
+/* header.main-grid {
   background-color: transparent;
-}
+} */
+
 .main-grid.black {
   background-color: var(--dark-800);
 }
@@ -333,12 +333,14 @@ header {
   z-index: 10000;
   top: 0;
   left: 0;
+  background-color: var(--primary-light);
+  border-bottom: var(--border-thin-black);
 }
 
-header.mix-blend {
+/* header.mix-blend {
   mix-blend-mode: difference;
 }
-
+ */
 .nav-wrapper {
   display: flex;
   gap: var(--spacing-10);
@@ -351,9 +353,17 @@ header.mix-blend {
   display: none;
 }
 
+.menu-item .link-btn,
 .menu-item a {
-  color: var(--bg-color);
+  height: 40px;
+  color: var(--dark-800);
   font-size: var(--font-size-md);
+  padding-inline: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding-block: var(--spacing-2);
 }
 
 .burger-icon {
@@ -370,11 +380,28 @@ header.mix-blend {
 
 .bar {
   transition: var(--easing);
-  background-color: var(--bg-color);
+  /*  background-color: var(--bg-color); */
+  background-color: var(--dark-800);
 }
 
 .burger-icon.close-icon .bar {
   margin-block: 0px;
+  background-color: var(--primary-light);
+}
+
+#logo.white a svg path {
+  fill: var(--primary-light);
+  color: var(--primary-light);
+}
+
+.logo a svg path {
+  fill: var(--dark-800);
+  color: var(--dark-800);
+}
+
+.logo {
+  position: relative;
+  z-index: 900;
 }
 
 .tw-col-grid.sub-wrap {
@@ -429,6 +456,11 @@ header.mix-blend {
   top: 0%;
   left: 0%;
   opacity: 1;
+  color: var(--primary-light);
+}
+
+.bar.white {
+  background-color: var(--primary-light);
 }
 
 .burger-icon.close-icon {
@@ -442,7 +474,7 @@ header.mix-blend {
 .burger-icon .bar {
   height: 2px;
   width: 50px;
-  background-color: var(--bg-color);
+
   margin-block: var(--spacing-2);
 }
 
@@ -468,7 +500,7 @@ header.mix-blend {
 
 .burger-wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 
@@ -528,16 +560,6 @@ header.mix-blend {
   justify-content: center;
   height: 100%;
 } */
-
-.logo svg path {
-  fill: var(--bg-color);
-  color: var(--bg-color);
-}
-
-.logo {
-  position: relative;
-  z-index: 900;
-}
 
 /* !navigation */
 /* Footer */
@@ -1802,12 +1824,8 @@ a.udstilling-grid {
   /*NAV*/
   .menu {
     display: flex;
-  }
-
-  .menu-item a {
-    display: inline-block;
-    position: relative;
-    padding-block: var(--spacing-2);
+    display: flex;
+    align-items: baseline;
   }
 
   .image-holder {
@@ -1971,23 +1989,33 @@ a.udstilling-grid {
     max-width: 500px;
   }
 
-  /*   .drop-down {
-    position: absolute;
-    background-color: var(--dark-800);
-    isolation: isolate;
+  #drop-down {
+    position: relative;
+  }
 
+  .drop-down {
+    position: absolute;
+    background-color: var(--primary-light);
+    color: var(--dark-800);
     width: 300px;
     padding: var(--spacing-4);
     visibility: hidden;
     transition: var(--easing);
+    text-align: start;
     opacity: 0;
+    top: 120%;
     z-index: 999999;
+    border: 1px solid rgba(0, 0, 0, 0.407);
+  }
+  .drop-down li {
+    padding-block: var(--spacing-3);
   }
 
   .drop-down.open-down {
     visibility: visible;
+
     opacity: 1;
-  } */
+  }
 }
 
 .udstilling-text {
@@ -2018,11 +2046,21 @@ div.overlay {
     opacity: 0.6;
   }
 
+  .link-btn:focus-within .drop-down {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .link-btn:hover .drop-down {
+    visibility: visible;
+    opacity: 1;
+  }
   .udstilling-grid:hover .udstilling-text {
     opacity: 1;
   }
 
-  .menu-item a::after {
+  .menu-item a::after,
+  .menu-item button::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -2030,12 +2068,13 @@ div.overlay {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--bg-color);
+    background-color: var(--dark-800);
     transform-origin: bottom right;
     transition: var(--easing-transform);
   }
 
-  .menu-item a:hover::after {
+  .menu-item a:hover::after,
+  .menu-item button:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }

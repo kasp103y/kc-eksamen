@@ -3,21 +3,8 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
   const burgerIcon = document.querySelector(".burger-icon");
   const burgerMenu = document.querySelector(".burger");
-  const header = document.querySelector("header");
+
   const deBody = document.querySelector("body");
-  /*  const dropdown = document.querySelector(".drop-down");
-  const dropdownBtn = document.querySelector("#drop-down"); */
-
-  /*  dropdownBtn.addEventListener("mouseover", showDropdown);
-  dropdownBtn.addEventListener("mouseout", hideDropdown);
-  function showDropdown() {
-    dropdown.classList.toggle("open-down");
-  }
-
-  function hideDropdown() {
-    dropdown.classList.toggle("open-down");
-  }
- */
 
   /*   let btnAdd = document.querySelector("#add");
   let btnSubtract = document.querySelector("#subtract");
@@ -37,8 +24,9 @@ function start() {
   const subBurgerBtn = document.querySelector(".sub-burger-btn");
   const subBurger = document.querySelector(".sub-burger");
   const lukSub = document.querySelector("#back");
+  const logo = document.querySelector("#logo");
 
-  /*  dropdownBtn.addEventListener("click", showDropdown);
+  /* dropdownBtn.addEventListener("click", showDropdown);
   lukSub.addEventListener("click", hideDropdown);
 
   function showDropdown() {
@@ -54,6 +42,7 @@ function start() {
     burgerMenu.classList.toggle("open");
     burgerIcon.classList.toggle("close-icon");
     deBody.classList.toggle("stop-scrolling");
+    logo.classList.toggle("white");
 
     let ariaEx = burgerIcon.getAttribute("aria-expanded");
 
@@ -64,8 +53,6 @@ function start() {
     }
     burgerIcon.setAttribute("aria-expanded", ariaEx);
     subBurgerBtn.setAttribute("aria-expanded", "false");
-
-    header.classList.toggle("mix-blend");
 
     subBurger.classList.remove("open");
 

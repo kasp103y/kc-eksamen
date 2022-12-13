@@ -21,9 +21,9 @@
     <div id="cursor">
       <div id="cta"><p>Læs mere</p></div>
     </div>
-    <header class="main-grid mix-blend">
+    <header class="main-grid">
       <nav role="navigation">
-        <figure class="logo hover-circle">
+        <figure class="logo hover-circle" id="logo">
           <a href="index.html">
             <svg
               width="268"
@@ -50,12 +50,24 @@
               <a href="udstillinger.html">Udstillinger</a>
             </li>
             <li class="menu-item hover-circle" id="drop-down">
-              <a href="#">Besøg Kunsthallen</a>
-              <!--  <ul class="drop-down">
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-              </ul> -->
+              <button class="link-btn">
+                Besøg Kunsthallen
+                <svg
+                  width="16"
+                  height="9"
+                  viewBox="0 0 16 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M1 1L8.21212 8L15 1" stroke="#131212" />
+                </svg>
+                <ul class="drop-down">
+                  <li><a href="#">Praktisk information</a></li>
+                  <li><a href="#">Apollo Bar</a></li>
+                  <li><a href="#">Boghandel</a></li>
+                  <li><a href="#">Biografen</a></li>
+                </ul>
+              </button>
             </li>
             <li class="menu-item hover-circle">
               <a href="shop.html">Årskort & Billetter</a>
@@ -66,8 +78,8 @@
             aria-label="menu button"
             aria-expanded="false"
           >
-            <div class="bar white"></div>
-            <div class="bar white"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
           </button>
           <article class="burger main-grid">
             <article class="burger-wrapper">
@@ -82,15 +94,16 @@
                   <button href="#">
                     Besøg kunsthallen
                     <svg
-                      width="8"
-                      height="13"
-                      viewBox="0 0 8 13"
+                      style="transform: rotate(180deg)"
+                      width="20"
+                      height="12"
+                      viewBox="0 0 20 12"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M7.6998 6.69995L1.6998 12.7L0.299805 11.3L4.8998 6.69995L0.299804 2.09995L1.6998 0.699951L7.6998 6.69995Z"
-                        fill="#FAF9F8"
+                        d="M6 12L7.4 10.55L3.85 7H20V5H3.85L7.4 1.45L6 0L0 6L6 12Z"
+                        fill="#FBF5F5"
                       />
                     </svg>
                   </button>
@@ -234,39 +247,41 @@
               </article>
             </article>
           </article>
-          <article class="sub-burger">
-            <button id="back" class="hover-circle">
-              <svg
-                width="8"
-                height="13"
-                viewBox="0 0 8 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.6998 6.69995L1.6998 12.7L0.299805 11.3L4.8998 6.69995L0.299804 2.09995L1.6998 0.699951L7.6998 6.69995Z"
-                  fill="#FAF9F8"
-                />
-              </svg>
-              Tilbage til hovedmenu
-            </button>
-            <article>
-              <article class="tw-col-grid">
-                <ul class="sub-menu">
-                  <li class="burger-item hover-circle">
-                    <a href="#">Praktisk info</a>
-                  </li>
+          <article class="sub-burger main-grid">
+            <article class="burger-wrapper">
+              <article>
+                <article class="tw-col-grid sub-wrap">
+                  <button class="back white hover-circle" id="back">
+                    <svg
+                      width="20"
+                      height="12"
+                      viewBox="0 0 20 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 12L7.4 10.55L3.85 7H20V5H3.85L7.4 1.45L6 0L0 6L6 12Z"
+                        fill="black"
+                      /></svg
+                    >Til hovedmenu
+                  </button>
 
-                  <li class="burger-item hover-circle">
-                    <a href="#">Apollo Bar</a>
-                  </li>
-                  <li class="burger-item hover-circle">
-                    <a href="events.html">Besøg vores Boghandel</a>
-                  </li>
-                  <li class="burger-item hover-circle">
-                    <a href="#">Besøg vores Biograf</a>
-                  </li>
-                </ul>
+                  <ul class="sub-menu">
+                    <li class="burger-item hover-circle">
+                      <a href="#">Praktisk info</a>
+                    </li>
+
+                    <li class="burger-item hover-circle">
+                      <a href="#">Apollo Bar</a>
+                    </li>
+                    <li class="burger-item hover-circle">
+                      <a href="events.html">Boghandel</a>
+                    </li>
+                    <li class="burger-item hover-circle">
+                      <a href="#">Biograf</a>
+                    </li>
+                  </ul>
+                </article>
               </article>
             </article>
           </article>
