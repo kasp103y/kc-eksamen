@@ -473,7 +473,7 @@ header.mix-blend {
   align-items: center;
 
   min-height: 100vh;
-  padding-top: var(--spacing-10);
+
   grid-column: 2/3;
   justify-content: space-around;
 }
