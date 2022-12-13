@@ -660,14 +660,27 @@ footer {
 
 .hero-wrapper {
   background-color: var(--bg-color);
+  padding-top: var(--spacing-10);
 }
 
+.hero-section {
+  position: relative;
+}
 .hero-heading {
+  z-index: 1;
+  margin-bottom: var(--spacing-4);
+}
+.hero-intro {
   z-index: 1;
 }
 
-.hero-section .udstilling-grid {
-  display: none;
+.hero-section .udstillinger-grid {
+  width: 60%;
+  position: absolute;
+  z-index: 0;
+  top: -18%;
+  left: 50%;
+  opacity: 0.5;
 }
 
 .hero-section {
@@ -1171,7 +1184,7 @@ video {
 }
 
 .featured-ex a {
-  margin-top: var(--spacing-8);
+  margin-top: var(--spacing-4);
 }
 
 .featured-ex.black {
@@ -1194,10 +1207,6 @@ video {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-.featured-ex a {
-  margin-bottom: var(--spacing-9);
 }
 
 .paragraph-title {
@@ -1358,10 +1367,33 @@ a.udstilling-grid {
   background-position: center;
 }
 
+.hero-intro .paragraph {
+  margin-block: var(--spacing-6);
+}
+
+.hero-btns {
+  margin-top: var(--spacing-6);
+}
+
 /****************************************************************** Tablet *************************************************************************/
 
 @media screen and (min-width: 750px) {
   /* Tablet styling goes here  */
+
+  .hero-btns {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-6);
+  }
+
+  .hero-section .udstillinger-grid {
+    width: 100%;
+    position: static;
+    z-index: 0;
+    top: -18%;
+    left: 50%;
+    opacity: 1;
+  }
 
   .tw-col-grid {
     display: grid;
@@ -1560,6 +1592,16 @@ a.udstilling-grid {
 
 @media screen and (min-width: 1100px) {
   /* Desktop styling goes here  */
+
+  .hero-wrapper {
+    background-color: var(--bg-color);
+    padding-top: 0;
+  }
+
+  .hero-heading {
+    z-index: 1;
+    margin-bottom: 0;
+  }
 
   .featured-ex.black {
     position: sticky;
@@ -1850,16 +1892,7 @@ a.udstilling-grid {
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 10;
-  }
-
-  .hero-intro .paragrapgh {
-    margin-block: var(--spacing-6);
-  }
-
-  .hero-btns {
-    display: flex;
-    gap: var(--spacing-4);
-    margin-top: var(--spacing-6);
+    margin-top: var(--spacing-8);
   }
 
   /***Udstillings component ******/
