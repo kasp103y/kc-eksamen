@@ -96,14 +96,16 @@ function start() {
     }
   });
 
+  const hoverCursorWhite = document.querySelectorAll(".white.blur-us");
+
+  const hoverCursor = document.querySelectorAll(".blur-us");
+
   let circle = document.getElementById("cursor");
   const onMouseMove = (e) => {
     circle.style.left = e.pageX + "px";
     circle.style.top = e.pageY + "px";
   };
   document.addEventListener("mousemove", onMouseMove);
-
-  const hoverCursor = document.querySelectorAll(".blur-us");
 
   hoverCursor.forEach((e) => {
     e.addEventListener("mouseenter", visCircle);
@@ -118,6 +120,22 @@ function start() {
 
     function shrinkCircle() {
       circle.classList.remove("vis");
+    }
+  });
+
+  hoverCursorWhite.forEach((e) => {
+    e.addEventListener("mouseenter", visCircle);
+
+    function visCircle() {
+      circle.classList.add("vis-white");
+    }
+  });
+
+  hoverCursorWhite.forEach((e) => {
+    e.addEventListener("mouseleave", shrinkCircle);
+
+    function shrinkCircle() {
+      circle.classList.remove("vis-white");
     }
   });
 
