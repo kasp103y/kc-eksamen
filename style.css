@@ -113,7 +113,7 @@ body.stop-scrolling {
 }
 
 .page-title {
-  margin-bottom: var(--spacing-9);
+  margin-bottom: var(--spacing-6);
   margin-top: var(--spacing-6);
   max-width: 600px;
 }
@@ -142,11 +142,10 @@ body.stop-scrolling {
 
 .display-heading {
   font-size: var(--font-size-xxl);
-
+  line-height: 90%;
   font-family: ivypresto-headline, serif;
   font-weight: 300;
   font-style: normal;
-  line-height: 120%;
 }
 
 .main-title {
@@ -614,20 +613,6 @@ footer {
 
 /* Buttons */
 
-.btn-secondary {
-  border: var(--border-thick-black);
-  padding: var(--btn-padding);
-  border-radius: 999px;
-  transition: var(--easing);
-  font-weight: 400;
-  font-family: var(--sans-serif);
-  font-size: var(--font-size-md);
-  cursor: pointer;
-  background-color: transparent;
-  display: block;
-  text-align: center;
-}
-
 .btn-secondary-smol {
   border: var(--border-thick-white);
   padding: 10px 20px;
@@ -640,6 +625,23 @@ footer {
   background-color: transparent;
   display: block;
   text-align: center;
+}
+
+.btn-secondary {
+  border: var(--border-thick-black);
+  border-radius: 999px;
+  display: block;
+  padding: var(--btn-padding);
+  transition: var(--easing);
+  font-weight: 400;
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  background-color: transparent;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .btn-solid-black {
@@ -977,6 +979,7 @@ h3.name {
   gap: var(--spacing-4);
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: var(--spacing-6);
 }
 
 .bread-crumbs p {
@@ -984,12 +987,12 @@ h3.name {
   font-weight: 500;
 }
 
-.bread-crumbs svg path {
-  fill: #7e7b7b;
+.bread-crumbs .arrow-bread svg path {
+  fill: var(--dark-400);
 }
 
 .bread-crumbs .inaktiv {
-  color: var(--dark-500);
+  color: var(--dark-400);
 }
 
 .products {
@@ -1613,6 +1616,8 @@ footer input {
     align-items: center;
     gap: var(--spacing-8);
     min-width: none;
+    margin-right: var(--spacing-8);
+    align-items: center;
   }
 
   .main-grid {
@@ -2186,6 +2191,16 @@ div.overlay {
 
 @media screen and (min-width: 1200px) {
   /* Desktop styling goes here  */
+
+  .btn-secondary:hover {
+    color: var(--primary-light);
+    background-color: var(--dark-800);
+  }
+
+  .btn-secondary.white:hover {
+    color: var(--dark-800);
+    background-color: var(--primary-light);
+  }
 
   .udstilling-grid:hover .overlay {
     opacity: 0.6;

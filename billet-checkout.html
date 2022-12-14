@@ -292,8 +292,8 @@
     <main role="main" class="main-grid">
       <section class="main-wrapper padding-block">
         <article class="bread-crumbs">
-          <p class="aktiv">Vælg</p>
-          <div class="arrow">
+          <a href="shop.html" class="inaktiv">Vælg</a>
+          <div class="arrow-bread">
             <svg
               width="20"
               height="12"
@@ -307,8 +307,8 @@
               />
             </svg>
           </div>
-          <p class="inaktiv">Information</p>
-          <div class="arrow">
+          <a href="billet.html" class="inaktiv">Information</a>
+          <div class="arrow-bread">
             <svg
               width="20"
               height="12"
@@ -322,8 +322,8 @@
               />
             </svg>
           </div>
-          <p class="inaktiv">Betal</p>
-          <div class="arrow">
+          <a href="#" class="aktiv">Betal</a>
+          <div class="arrow-bread">
             <svg
               width="20"
               height="12"
@@ -337,16 +337,14 @@
               />
             </svg>
           </div>
-          <p class="inaktiv">Oplev</p>
+          <a href="#" class="inaktiv">Oplev</a>
         </article>
-        <h1 class="main-title">Betaling</h1>
+        <article class="page-title">
+          <h1 class="main-title">Betaling</h1>
+        </article>
 
         <article class="products">
-          <form
-            action="/my-handling-form-page.html"
-            method="post"
-            class="check-out-form"
-          >
+          <form action="succes.html" class="check-out-form">
             <article class="check-wrapper">
               <p class="list-header line-heading">
                 Billetterne skal sendes til
@@ -422,7 +420,7 @@
                       value="inactive"
                       required
                     />
-                    <label for="card"> Betal med kort</label>
+                    <label for="card">Betal med kort</label>
                   </div>
                   <div class="svg-payment">
                     <svg
@@ -703,6 +701,9 @@
                 <button id="button" class="btn-solid-black" type="submit">
                   Gå til betaling
                 </button>
+                <!--   <a href="succes.html" class="btn-solid-black"
+                  >Gå til betaling</a
+                > -->
                 <a class="btn-tetriary" href="billet.html">Gå tilbage</a>
               </div>
             </article>

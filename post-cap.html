@@ -13,8 +13,9 @@
     />
     <link rel="stylesheet" href="https://use.typekit.net/qoo2kea.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="gsap.js"></script>
+
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>KUNSTHAL CHARLOTTENBORG | fed titel</title>
   </head>
   <body class="smooth-scroll">
@@ -324,17 +325,21 @@
           <article></article>
 
           <article class="about-artist">
-            <h2 class="second-title heading-margin">Om artisterne</h2>
-            <p class="paragraph">
+            <h2 class="second-title heading-margin" data-aos="fade-left">
+              Om artisterne
+            </h2>
+            <p class="paragraph" data-aos="fade-left">
               Post-Capital viser værker af 21 kunstnere, der på forskellig vis
               udforsker den æstetik og de paradokser, absurditeter og etiske
               spørgsmål, som den post-industrielle og måske post-kapitalistiske
               økonomi rejser.
             </p>
-            <figure><img src="billeder/kunsthal.jpg" alt="" /></figure>
+            <figure data-aos="fade-up">
+              <img src="billeder/kunsthal.jpg" alt="Kunsthallen" />
+            </figure>
             <article class="the-artists">
-              <p class="detail">Kunstnerne</p>
-              <p class="paragraph">
+              <p class="detail" data-aos="fade-right">Kunstnerne</p>
+              <p class="paragraph" data-aos="fade-left" data-aos-delay="100">
                 Ei Arakawa, Mohamed Bourouissa, Cao Fei, Simon Denny, Lara
                 Favaretto, GCC, Guan Xiao, Shadi Habib Allah, Roger Hiorns,
                 Oliver Laric, Liz Magic Laser, Katja Novitskova, Laura Owens,
@@ -366,9 +371,11 @@
             </article>
           </article> -->
           <article class="about-exhibition">
-            <h2 class="second-title heading-margin">Om udstillingen</h2>
+            <h2 class="second-title heading-margin" data-aos="fade-right">
+              Om udstillingen
+            </h2>
             <article class="tw-col-grid">
-              <article class="exhibition-card">
+              <article class="exhibition-card" data-aos="fade-left">
                 <img
                   class="ex-img"
                   src="billeder/hunter-dog.jpg"
@@ -383,7 +390,7 @@
                   and Los Angeles.
                 </p>
               </article>
-              <article class="exhibition-card">
+              <article class="exhibition-card" data-aos="fade-right">
                 <img
                   class="ex-img"
                   src="billeder/landscape.jpg"
@@ -398,7 +405,7 @@
                   and Los Angeles.
                 </p>
               </article>
-              <article class="exhibition-card">
+              <article class="exhibition-card" data-aos="fade-left">
                 <img
                   class="ex-img"
                   src="billeder/landscape.jpg"
@@ -413,7 +420,7 @@
                   and Los Angeles.
                 </p>
               </article>
-              <article class="exhibition-card">
+              <article class="exhibition-card" data-aos="fade-right">
                 <img
                   class="ex-img"
                   src="billeder/landscape.jpg"
@@ -428,7 +435,11 @@
                   and Los Angeles.
                 </p>
               </article>
-              <article class="exhibition-card">
+              <article
+                class="exhibition-card"
+                data-aos="fade-left"
+                data-aos-delay="100"
+              >
                 <img
                   class="ex-img"
                   src="billeder/landscape.jpg"
@@ -443,7 +454,7 @@
                   and Los Angeles.
                 </p>
               </article>
-              <article class="ex-text">
+              <article class="ex-text" data-aos="fade-down">
                 <h2 class="third-title-serif center">
                   Post-Capital sammenstiller værker inden for en lang række
                   udtryksformer – skulptur, maleri, fotografi, video og
@@ -451,7 +462,7 @@
                   rigdommens væsen.
                 </h2>
               </article>
-              <article class="exhibition-card">
+              <article class="exhibition-card" data-aos="fade-left">
                 <img
                   class="ex-img"
                   src="billeder/landscape.jpg"
@@ -466,7 +477,7 @@
                   and Los Angeles.
                 </p>
               </article>
-              <article class="exhibition-card">
+              <article class="exhibition-card" data-aos="fade-right">
                 <img
                   class="ex-img"
                   src="billeder/landscape.jpg"
@@ -487,7 +498,10 @@
       </section>
 
       <section class="main-grid">
-        <section class="nyheder main-wrapper padding-block">
+        <section
+          class="nyheder main-wrapper padding-block"
+          data-aos="fade-left"
+        >
           <article>
             <h2 class="second-title heading-margin">
               Se vores andre udstillinger
@@ -731,6 +745,10 @@
         </article>
       </section>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
       window.addEventListener("scroll", myFunc);
 

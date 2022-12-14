@@ -15,11 +15,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="gsap.js"></script>
     <script src="script.js" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
     <title>KUNSTHAL CHARLOTTENBORG | fed titel</title>
   </head>
   <body class="smooth-scroll">
@@ -311,7 +307,7 @@
               />
             </svg>
           </div>
-          <a href="#" class="aktiv">Information</a>
+          <a href="billet.html" class="inaktiv">Information</a>
           <div class="arrow-bread">
             <svg
               width="20"
@@ -326,7 +322,7 @@
               />
             </svg>
           </div>
-          <a href="#" class="inaktiv">Betal</a>
+          <a href="#" class="aktiv">Betal</a>
           <div class="arrow-bread">
             <svg
               width="20"
@@ -344,130 +340,10 @@
           <a href="#" class="inaktiv">Oplev</a>
         </article>
         <article class="page-title">
-          <h1 class="main-title">Vælg billetter</h1>
-          <p class="margin-bottom">
-            Billetter giver adgang til alle events og udstillinger på dagen hvor
-            billetterne bliver anvendt.
-          </p>
-          <p>Købte billetter gælder 1 år fra købsdatoen.</p>
+          <h1 class="main-title">Sådan baby</h1>
         </article>
-        <article class="products">
-          <p>Vælg venligst billettype</p>
-          <ul>
-            <li>
-              <article class="ticket-type">
-                <article class="ticket-info">
-                  <article class="name">
-                    <p>Dagsbillet</p>
-                    <p class="info-header">Voksen (16+ År)</p>
-                  </article>
 
-                  <article class="pris-type">
-                    <p class="info-header">90.00</p>
-                    <p class="detail">DKK</p>
-                  </article>
-                </article>
-
-                <div role="form" class="button-counter">
-                  <!--  <button class="count-btn" id="subtract">-</button>
-                  <input
-                    id="counter"
-                    min="0"
-                    max="12"
-                    type="number"
-                    value="0"
-                    aria-label="counter"
-                  />
-                  <button class="count-btn" id="add">+</button> -->
-                  <button
-                    aria-label="subtract from counter"
-                    class="count-btn hover-circle"
-                    id="subtract"
-                  >
-                    -
-                  </button>
-                  <input
-                    type="number"
-                    value="0"
-                    min="0"
-                    step="1"
-                    max="100"
-                    aria-label="counter"
-                    class="counter"
-                    id="counter"
-                  />
-                  <button
-                    aria-label="add to counter"
-                    class="count-btn hover-circle"
-                    id="add"
-                  >
-                    +
-                  </button>
-                </div>
-              </article>
-            </li>
-            <li>
-              <article class="ticket-type">
-                <article class="ticket-info">
-                  <article class="name">
-                    <p>Dagsbillet</p>
-                    <p class="info-header">Studerende</p>
-                  </article>
-
-                  <article class="pris-type">
-                    <p class="info-header">90.00</p>
-                    <p class="detail">DKK</p>
-                  </article>
-                </article>
-
-                <div role="form" class="button-counter">
-                  <button
-                    aria-label="subtract from counter"
-                    class="count-btn hover-circle"
-                    id="subtract-var"
-                  >
-                    -
-                  </button>
-                  <input
-                    step="1"
-                    type="number"
-                    pattern="[0-9]+"
-                    value="0"
-                    min="0"
-                    max="100"
-                    aria-label="counter"
-                    class="counter"
-                    id="counter-var"
-                  />
-                  <button
-                    aria-label="add to counter"
-                    class="count-btn hover-circle"
-                    id="add-var"
-                  >
-                    +
-                  </button>
-                </div>
-              </article>
-            </li>
-            <li>
-              <article class="ticket-type">
-                <article class="ticket-info">
-                  <article class="name">
-                    <p class="info-header">Børn 0-15 år</p>
-                  </article>
-                </article>
-
-                <p class="info-header">Gratis</p>
-              </article>
-            </li>
-          </ul>
-          <div class="btn-nav">
-            <a class="hover-circle btn-tetriary" href="#">Gå Tilbage</a>
-            <a class="hover-circle btn-solid-black" href="billet-checkout.html"
-              >Udfyld Informationer</a
-            >
-          </div>
-        </article>
+        <article class="products"></article>
       </section>
     </main>
 
@@ -476,82 +352,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
   </body>
 </html>
-<script>
-  //Counter 1
-
-  const minusBtn = document.querySelector("#subtract");
-  const plusBtn = document.querySelector("#add");
-  const numberPlace = document.querySelector("#counter");
-  let number = 0; /// number value
-  let min = 0; /// min number
-  let max = 100; /// max number
-
-  minusBtn.addEventListener("click", () => {
-    if (number > min) {
-      number = number - 1; /// Minus 1 of the number
-      numberPlace.value = number; /// Display the value in place of the number
-    }
-    if (number == min) {
-      numberPlace.style.color = "red";
-      setTimeout(function () {
-        numberPlace.style.color = "black";
-      }, 500);
-    } else {
-      numberPlace.style.color = "black";
-    }
-  });
-
-  plusBtn.addEventListener("click", () => {
-    if (number < max) {
-      number = number + 1;
-      numberPlace.value = number; /// Display the value in place of the number
-    }
-    if (number == max) {
-      numberPlace.style.color = "red";
-      setTimeout(function () {
-        numberPlace.style.color = "black";
-      }, 500);
-    } else {
-      numberPlace.style.color = "black";
-    }
-  });
-
-  //Counter 2
-
-  const minusBtnVar = document.querySelector("#subtract-var");
-  const plusBtnVar = document.querySelector("#add-var");
-  const numberPlaceVar = document.querySelector("#counter-var");
-  let numberVar = 0; /// number value
-  let minVar = 0; /// min number
-  let maxVar = 100; /// max number
-
-  minusBtnVar.addEventListener("click", () => {
-    if (numberVar > minVar) {
-      numberVar = numberVar - 1; /// Minus 1 of the number
-      numberPlaceVar.value = numberVar; /// Display the value in place of the number
-    }
-    if (numberVar == minVar) {
-      numberPlaceVar.style.color = "red";
-      setTimeout(function () {
-        numberPlaceVar.style.color = "black";
-      }, 500);
-    } else {
-      numberPlaceVar.style.color = "black";
-    }
-  });
-
-  plusBtnVar.addEventListener("click", () => {
-    if (numberVar < maxVar) {
-      numberVar = numberVar + 1;
-      numberPlaceVar.value = numberVar; /// Display the value in place of the number
-    }
-    if (numberVar == maxVar) {
-      numberPlaceVar.style.color = "red";
-      setTimeout(function () {
-        numberPlaceVar.style.color = "black";
-      }, 500);
-    } else {
-      numberPlaceVar.style.color = "black";
-    }
-  });
-</script>
