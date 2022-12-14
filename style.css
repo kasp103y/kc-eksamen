@@ -228,6 +228,17 @@ body.stop-scrolling {
   font-weight: var(--paragraph-weight);
 }
 
+p {
+  max-width: 65ch;
+}
+
+.paragraph-title {
+  font-size: var(--font-size-md);
+  font-family: var(--sans-serif);
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+}
+
 .paragraph a {
   font-size: var(--font-size-md);
   text-decoration: underline 2px black;
@@ -368,6 +379,10 @@ header {
 .burger-item a,
 .burger-item button {
   position: relative;
+}
+
+.burger-item.smol a {
+  font-size: var(--font-size-base);
 }
 
 .burger-icon {
@@ -817,6 +832,7 @@ h3.name {
   width: 100%;
   background-color: transparent;
   text-align: left;
+  border: none;
   border-top: var(--border-thick-black);
   border-inline: none;
   padding-block: var(--spacing-4);
@@ -1434,6 +1450,22 @@ a.udstilling-grid {
   border-bottom: var(--border-thin-white);
 }
 
+.back {
+  position: static;
+  display: flex;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--dark-800);
+  font-family: var(--serif);
+  font-size: var(--font-size-md);
+  width: fit-content;
+  cursor: pointer;
+  align-items: center;
+  gap: var(--spacing-2);
+  border-bottom: var(--border-thin-black);
+}
+
 .back.white svg path {
   fill: var(--primary-light);
 }
@@ -1502,10 +1534,48 @@ footer input {
   margin-bottom: var(--spacing-4);
 }
 
+.event-container {
+  min-height: 50vh;
+}
+
+.full-width-wrapper {
+  grid-column: 2/3;
+}
+
+.deskt-only {
+  display: none;
+}
+
+.top-bar {
+  width: 100%;
+  height: 30px;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  background-color: var(--dark-700);
+  color: var(--primary-light);
+  align-items: center;
+  transition: var(--easing);
+}
+
+.top-bar.gone-girl {
+  height: 0;
+  opacity: 0;
+}
+
 /****************************************************************** Tablet *************************************************************************/
 
 @media screen and (min-width: 768px) {
   /* Tablet styling goes here  */
+
+  .menu-item.lang a {
+    font-size: var(--font-size-sm);
+    color: var(--dark-300);
+  }
+
+  .selected {
+    color: var(--dark-800);
+  }
 
   .hero-section .udstilling-grid {
     display: block;
@@ -1593,6 +1663,8 @@ footer input {
 
   .main-title {
     font-size: var(--font-size-xxxl);
+    line-height: 90%;
+    max-width: 800px;
 
     font-weight: 400;
   }
@@ -1622,7 +1694,7 @@ footer input {
 
   .main-grid {
     display: grid;
-    grid-template-columns: 5% 1fr 10%;
+    grid-template-columns: 10% 1fr 10%;
     padding-inline: 0;
   }
 
@@ -1738,10 +1810,58 @@ footer input {
   }
 }
 
+.prak-img {
+  margin-bottom: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+.prak-grid .tw-col-grid {
+  display: block;
+}
+
+.prak-grid {
+  min-width: 0;
+}
+
 /****************************************************************** Desktop ************************************************************************/
 
 @media screen and (min-width: 1230px) {
   /* Desktop styling goes here  */
+
+  .deskt-only {
+    display: block;
+  }
+
+  .prak-grid .tw-col-grid {
+    display: grid;
+  }
+  .prak-img {
+    margin-block: var(--spacing-9);
+  }
+
+  .prak-txt {
+    margin-left: var(--spacing-6);
+  }
+  .prak-txt-var {
+    margin-right: var(--spacing-6);
+  }
+
+  .full-width-wrapper {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 15% 1fr 1fr 15%;
+  }
+
+  .flex-first {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    margin-block: var(--spacing-10);
+  }
+
+  .flex-first.reverse {
+    flex-direction: row-reverse;
+  }
 
   footer form .input-wrapper {
     display: flex;

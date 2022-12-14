@@ -158,6 +158,17 @@ function start() {
   });
 }
 
+window.addEventListener("scroll", myFuncHeader);
+
+function myFuncHeader() {
+  console.log("myFunc");
+  if (window.scrollY > 20) {
+    document.querySelector(".top-bar").classList.add("gone-girl");
+  } else if (window.scrollY < 20) {
+    document.querySelector(".top-bar").classList.remove("gone-girl");
+  }
+}
+
 /*
 
 
