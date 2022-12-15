@@ -2058,7 +2058,7 @@ footer input {
 
   #cursor {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     display: block;
     height: 24px;
     width: 24px;
@@ -2066,8 +2066,10 @@ footer input {
     mix-blend-mode: difference;
     border: var(--border-thin-white);
     pointer-events: none;
+    
     /* transition: top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out,
       height 0.1s ease-out, background-color 0.1s ease-out, border 0.1s ease-out, visibility 0.1s ease-out; */
+      /*Mus effekt virker ikke med transition i andre browsere end firefox*/
      
   transition: width 0.1s ease-out,
   height 0.1s ease-out;
@@ -2077,8 +2079,10 @@ footer input {
 
   @-moz-document url-prefix() {
     #cursor {
+      /*Transition i firefoxß*/
       transition: top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out,
     height 0.1s ease-out, background-color 0.1s ease-out, border 0.1s ease-out, visibility 0.1s ease-out; 
+    transform: translate(-50%, -50%);
     }
   }
 
