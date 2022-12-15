@@ -92,7 +92,7 @@ function start() {
     function changeImageBack() {
       figTitle.innerHTML = "SE UDSTILLINGER";
       figArtist.innerHTML = "SE UDSTILLINGER ";
-      image.src = "billeder/white-img.jpg";
+      image.src = "webp/pc-1-port";
     }
   });
 
