@@ -1665,13 +1665,7 @@ footer input {
     opacity: 1;
   }
 
-  .tw-col-grid {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--spacing-4);
-  }
+
 
   .video-wrapper-var {
     grid-column: 6/13;
@@ -1854,6 +1848,8 @@ footer input {
   .burger .info {
     display: none;
   }
+
+
 }
 
 .prak-img {

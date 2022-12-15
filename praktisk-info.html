@@ -891,14 +891,7 @@
     AOS.init();
   </script>
   <style>
-    :root {
-      --infoHeader: clamp(1.25rem, 1.0963rem + 0.6256vw, 1.6875rem);
-
-      --hero-margin-top-mobile: 124px;
-
-      --mobile-body-margin: 20px;
-    }
-
+   
     .tw-col-grid {
       max-width: 100%;
       grid-column: 2/3;
@@ -968,14 +961,29 @@
 
     .info-header-underlined:nth-child(1) {
       grid-column: 1/5;
+      
     }
 
     .info-header-underlined:nth-child(2) {
       grid-column: 6/13;
+      
     }
+
 
     .info-header-underlined p {
       padding-bottom: var(--spacing-2);
     }
+
+    @media screen and (min-width: 768px) {
+
+    .tw-col-grid {
+      display: grid;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--spacing-4);
+    }
+    
+  }
   </style>
 </html>
