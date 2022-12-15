@@ -1324,7 +1324,7 @@ a.udstilling-grid:first-child .item-wrapper {
 }
 
 a.udstilling-grid:nth-child(2) .item-wrapper {
-  background: url("webp/dm-port-2.webp"), var(--dark-600);
+  background: url("webp/"), var(--dark-600);
   aspect-ratio: 4/6;
   background-size: cover;
 }
