@@ -172,7 +172,7 @@ body.stop-scrolling {
 }
 
 .third-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-family: var(--sans-serif);
   font-weight: 500;
 }
@@ -1336,13 +1336,13 @@ a.udstilling-grid:nth-child(3) .item-wrapper {
 }
 
 a.udstilling-grid:nth-child(4) .item-wrapper {
-  background: url("billeder/post-cap-2.jpg"), var(--dark-600);
+  background: url("webp/beardy-2.webp"), var(--dark-600);
   aspect-ratio: 4/6;
   background-size: cover;
 }
 
 a.udstilling-grid:last-of-type .item-wrapper {
-  background: url("billeder/cao-fei-2.jpg"), var(--dark-600);
+  background: url("webp/cao-fei-square-1.webp"), var(--dark-600);
   aspect-ratio: 1/1;
   background-size: cover;
 }
