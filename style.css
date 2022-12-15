@@ -296,6 +296,11 @@ a {
   margin: var(--spacing-8);
 }
 
+.top-bar p {
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-sm);
+}
+
 /****************************************************************** Mobile & general *************************************************************************/
 
 .main-grid {
@@ -353,7 +358,7 @@ header {
  */
 .nav-wrapper {
   display: flex;
-  gap: var(--spacing-9);
+  gap: var(--spacing-8);
   align-items: center;
 }
 
@@ -647,7 +652,7 @@ footer {
   border-radius: 999px;
   display: block;
   padding: var(--btn-padding);
-  transition: var(--easing);
+  transition: var(--easing) !important;
   font-weight: 400;
   font-family: var(--sans-serif);
   font-size: var(--font-size-md);
@@ -1548,7 +1553,7 @@ footer input {
 
 .top-bar {
   width: 100%;
-  height: 30px;
+  height: 25px;
   grid-column: 1/4;
   display: flex;
   justify-content: center;
@@ -1561,6 +1566,21 @@ footer input {
 .top-bar.gone-girl {
   height: 0;
   opacity: 0;
+}
+
+.nav-skip {
+  opacity: 0;
+  position: absolute;
+  z-index: 10;
+  background-color: var(--dark-800);
+  color: var(--primary-light);
+  padding: 5px 10px;
+  border-radius: 99999px;
+  pointer-events: none;
+}
+
+.nav-skip:focus-within {
+  opacity: 1;
 }
 
 /****************************************************************** Tablet *************************************************************************/
