@@ -1318,13 +1318,14 @@ a.udstilling-grid:last-of-type {
 }
 
 a.udstilling-grid:first-child .item-wrapper {
-  background: url("webp/mar-1-square.webp"), var(--dark-600);
+  background: url("webp/pc-1-port.webp"), var(--dark-600);
   aspect-ratio: 1/1;
   background-size: cover;
+  background-position: 50%;
 }
 
 a.udstilling-grid:nth-child(2) .item-wrapper {
-  background: url("webp/"), var(--dark-600);
+  background: url("webp/dm-8.webp"), var(--dark-600);
   aspect-ratio: 4/6;
   background-size: cover;
 }
@@ -1408,7 +1409,7 @@ a.udstilling-grid {
 }
 
 .heading-margin {
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-7);
 }
 
 .event-info ul li {
@@ -2163,6 +2164,10 @@ footer input {
 
   .image-holder {
     display: block;
+  }
+
+  .image-holder img {
+    aspect-ratio: 4/6;
   }
 
   /*GRIDS*/
