@@ -90,9 +90,9 @@ function start() {
       /*   console.log(image); */
     }
     function changeImageBack() {
-      figTitle.innerHTML = "SE UDSTILLINGER";
-      figArtist.innerHTML = "SE UDSTILLINGER ";
-      image.src = "webp/pc-1-port";
+      figTitle.innerHTML = "KUNSTHAL CHARLOTTENBORG";
+      figArtist.innerHTML = "UDFORSK UDSTILLINGER";
+      image.src = "webp/charlottenborg.webp";
     }
   });
 
