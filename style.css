@@ -373,7 +373,7 @@ header {
 
 .menu-item .link-btn,
 .menu-item a {
-  
+  font-family: var(--sans-serif);
   color: var(--dark-800);
   font-size: var(--font-size-base);
  
@@ -394,6 +394,8 @@ height: 35px;
 padding: 0;
 margin: 0;
 display: inline-block;
+font-weight: 300 !important;
+font-size: var(--font-size-base);
 }
 
 .menu-item .link-btn {
@@ -401,6 +403,8 @@ display: inline-block;
   height: 35px;
   padding: 0;
   margin: 0s;
+  font-weight: 300 !important;
+  font-size: var(--font-size-base);
 }
 
 .burger-item a,
@@ -1314,19 +1318,19 @@ a.udstilling-grid:last-of-type {
 }
 
 a.udstilling-grid:first-child .item-wrapper {
-  background: url("billeder/eye.jpg"), var(--dark-600);
+  background: url("webp/mar-1-square.webp"), var(--dark-600);
   aspect-ratio: 1/1;
   background-size: cover;
 }
 
 a.udstilling-grid:nth-child(2) .item-wrapper {
-  background: url("billeder/beardy.jpg"), var(--dark-600);
+  background: url("webp/dm-port-2.webp"), var(--dark-600);
   aspect-ratio: 4/6;
   background-size: cover;
 }
 
 a.udstilling-grid:nth-child(3) .item-wrapper {
-  background: url("billeder/post-cap.jpg"), var(--dark-600);
+  background: url("webp/ha-1-port.webp"), var(--dark-600);
   aspect-ratio: 4/6;
   background-size: cover;
 }
