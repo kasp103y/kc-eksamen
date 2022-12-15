@@ -382,6 +382,7 @@ header {
   cursor: pointer;
   position: relative;
   padding-block: var(--spacing-2);
+  font-weight: 300 !important;
 }
 
 .burger-item a,
@@ -656,6 +657,7 @@ footer {
   display: block;
   padding: var(--btn-padding);
   transition: var(--easing) !important;
+  /*   !important fordi aos overtager transitions */
   font-weight: 400;
   font-family: var(--sans-serif);
   font-size: var(--font-size-md);
