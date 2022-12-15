@@ -100,7 +100,7 @@ body {
   background-color: var(--bg-color);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-	-webkit-backface-visibility: hidden;
+	
 }
 
 body.stop-scrolling {
@@ -373,16 +373,34 @@ header {
 
 .menu-item .link-btn,
 .menu-item a {
-  height: 40px;
+  
   color: var(--dark-800);
-  font-size: var(--font-size-md);
-  padding-inline: 0;
+  font-size: var(--font-size-base);
+ 
   border: none;
   background-color: transparent;
   cursor: pointer;
   position: relative;
-  padding-block: var(--spacing-2);
+  
   font-weight: 300 !important;
+  gap: var(--spacing-2);
+  
+}
+
+.menu-item a {
+line-height: 35px;
+vertical-align: middle;
+height: 35px;
+padding: 0;
+margin: 0;
+display: inline-block;
+}
+
+.menu-item .link-btn {
+  vertical-align: middle;
+  height: 35px;
+  padding: 0;
+  margin: 0s;
 }
 
 .burger-item a,
@@ -2082,7 +2100,7 @@ footer input {
       /*Transition i firefoxß*/
       transition: top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out,
     height 0.1s ease-out, background-color 0.1s ease-out, border 0.1s ease-out, visibility 0.1s ease-out; 
-    transform: translate(-50%, -50%);
+    
     }
   }
 
@@ -2136,8 +2154,7 @@ footer input {
   /*NAV*/
   .menu {
     display: flex;
-    display: flex;
-    align-items: baseline;
+    align-items: center;
   }
 
   .image-holder {
