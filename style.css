@@ -1062,8 +1062,8 @@ h3.name {
 }
 
 .products p {
-  margin-bottom: var(--spacing-5);
-  opacity: 65%;
+  /* margin-bottom: var(--spacing-3); */
+  opacity: 95%;
 }
 
 .products ul li {
@@ -1129,9 +1129,10 @@ input.counter {
 .ticket-type {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+
   padding-block: var(--spacing-3);
   border-top: var(--border-thin-black);
+  align-items: center;
 }
 
 .btn-nav {
@@ -1951,6 +1952,10 @@ footer input {
 
     background-color: var(--dark-800);
     border: var(--border-thin-white);
+  }
+
+  .footer-wrapper .form-wrapper form label {
+    opacity: 65%;
   }
 
   footer input {
