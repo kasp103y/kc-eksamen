@@ -967,7 +967,7 @@ h3.name {
 /*Om sektion frontpage mobil */
 
 .about-p > * {
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-9);
 }
 
 .about-p {
@@ -1268,6 +1268,7 @@ video {
 }
 
 .video-wrapper {
+  margin-top: var(--spacing-9);
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -1289,6 +1290,7 @@ video {
 }
 
 .featured-ex {
+  margin-top: var(--spacing-10);
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -1299,6 +1301,17 @@ video {
 
 .featured-ex.featured {
   padding-block: var(--spacing-4);
+}
+
+.featured-ex.featured h1 {
+  margin-bottom: var(--spacing-4);
+}
+.featured-ex.featured p {
+  margin-bottom: var(--spacing-4);
+}
+
+.featured-ex.featured button {
+  margin-top: var(--spacing-4);
 }
 
 .featured-ex a {
@@ -1436,7 +1449,7 @@ a.udstilling-grid {
 }
 
 .heading-margin {
-  margin-bottom: var(--spacing-7);
+  margin-bottom: var(--spacing-8);
 }
 
 .event-info ul li {
@@ -1697,6 +1710,8 @@ footer input {
     left: 50%;
     opacity: 1;
   }
+  .video-hero {
+  }
 
   .video-wrapper-var {
     grid-column: 6/13;
@@ -1756,6 +1771,7 @@ footer input {
   .paragraph-title {
     width: 700px;
     display: flex;
+    margin-top: 2rem;
   }
 
   .prod-wrapper {
@@ -1903,6 +1919,10 @@ footer input {
 
 @media screen and (min-width: 1230px) {
   /* Desktop styling goes here  */
+
+   {
+    margin-top: var(--spacing-8);
+  }
 
   .deskt-only {
     display: block;
