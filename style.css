@@ -1061,6 +1061,11 @@ h3.name {
   margin-bottom: var(--spacing-10);
 }
 
+.products p {
+  margin-bottom: var(--spacing-5);
+  opacity: 65%;
+}
+
 .products ul li {
   margin-bottom: var(--spacing-6);
   margin-top: var(--spacing-2);
@@ -1069,6 +1074,11 @@ h3.name {
 .products ul li a {
   padding-bottom: var(--spacing-1);
   border-bottom: var(--border-thick-black);
+}
+
+.page-title p {
+  margin-top: var(--spacing-4);
+  max-width: 36ch;
 }
 
 #counter,
