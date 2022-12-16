@@ -69,7 +69,6 @@
   --easing-transform: transform ease 300ms;
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -100,7 +99,6 @@ body {
   background-color: var(--bg-color);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-	
 }
 
 body.stop-scrolling {
@@ -172,7 +170,7 @@ body.stop-scrolling {
 }
 
 .third-title {
-  font-size: var(--font-size-md);
+  font-size: 1.25rem;
   font-family: var(--sans-serif);
   font-weight: 500;
 }
@@ -376,7 +374,7 @@ header {
   font-family: var(--sans-serif);
   color: var(--dark-800);
   font-size: var(--font-size-base);
- 
+
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -384,23 +382,22 @@ header {
   padding-block: var(--spacing-2);
   font-weight: 300 !important;
   gap: var(--spacing-2);
-  
 }
 
 .menu-item a {
-/* line-height: 35px; */
-vertical-align: middle;
-height: 35px;
+  /* line-height: 35px; */
+  vertical-align: middle;
+  height: 35px;
 
-/* display: inline-block; */
-font-weight: 300 !important;
-font-size: var(--font-size-base);
+  /* display: inline-block; */
+  font-weight: 300 !important;
+  font-size: var(--font-size-base);
 }
 
 .menu-item .link-btn {
   vertical-align: middle;
- /*  height: 35px; */
- 
+  /*  height: 35px; */
+
   font-weight: 300 !important;
   font-size: var(--font-size-base);
 }
@@ -575,7 +572,12 @@ font-size: var(--font-size-base);
 }
 
 .info-item p:first-child {
-  font-weight: 600;
+  font-weight: 300;
+  opacity: 90%;
+}
+
+.info-item p:last-child {
+  opacity: 65%;
 }
 
 .burger .info {
@@ -2087,26 +2089,23 @@ footer input {
     mix-blend-mode: difference;
     border: var(--border-thin-white);
     pointer-events: none;
-    
+
     /* transition: top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out,
       height 0.1s ease-out, background-color 0.1s ease-out, border 0.1s ease-out, visibility 0.1s ease-out; */
-      /*Mus effekt virker ikke med transition i andre browsere end firefox*/
-     
-  transition: width 0.1s ease-out,
-  height 0.1s ease-out;
+    /*Mus effekt virker ikke med transition i andre browsere end firefox*/
+
+    transition: width 0.1s ease-out, height 0.1s ease-out;
     z-index: 9999999999;
-    
   }
 
   @-moz-document url-prefix() {
     #cursor {
       /*Transition i firefoxß*/
       transition: top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out,
-    height 0.1s ease-out, background-color 0.1s ease-out, border 0.1s ease-out, visibility 0.1s ease-out; 
-    
+        height 0.1s ease-out, background-color 0.1s ease-out,
+        border 0.1s ease-out, visibility 0.1s ease-out;
     }
   }
-
 
   #cursor.vis {
     height: 120px;
@@ -2116,7 +2115,6 @@ footer input {
     display: grid;
     place-items: center;
     mix-blend-mode: normal;
-    
   }
 
   #cursor.vis-white {
