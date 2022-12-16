@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="https://use.typekit.net/qoo2kea.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="gsap.js"></script>
+
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>KUNSTHAL CHARLOTTENBORG | fed titel</title>
+    <title>
+      Udstillinger | Kunsthal Charlottenborg | Et af de største og smukkeste udstillingssteder
+      for samtidskunst i Nordeuropa.
+    </title>
+    <meta name="author" content="Kunsthal Charlottenborg" />
+    <meta name="copyright" content="Kunsthal Charlottenborg" />
+    <meta
+      name="description"
+      content="Kunsthallen præsenterer et ambitiøst udstillingsprogram med internationalt udsyn, der omfatter kunst af såvel talenter som etablerede stjerner fra både ind- og udland. Det toneangivende udstillingsprogram suppleres med en lang række aktiviteter som artist talks, performances, koncerter og filmvisninger."
+    />
   </head>
   <body class="smooth-scroll">
     <div id="cursor">
@@ -50,6 +55,7 @@
               />
             </svg>
           </a>
+          <a class="nav-skip" href="#start">Skip navigation</a>
         </figure>
         <section class="nav-wrapper">
           <ul class="menu">
@@ -57,7 +63,7 @@
               <a href="udstillinger.html">Udstillinger</a>
             </li>
             <li class="menu-item hover-circle" id="drop-down">
-              <button class="link-btn">
+              <button class="link-btn" id="plz">
                 Besøg Kunsthallen
                 <svg
                   width="16"
@@ -70,9 +76,9 @@
                 </svg>
                 <ul class="drop-down">
                   <li><a href="praktisk-info.html">Praktisk information</a></li>
-                  <li><a href="#">Apollo Bar</a></li>
-                  <li><a href="#">Boghandel</a></li>
-                  <li><a href="#">Biografen</a></li>
+                  <li><a href="404.html">Apollo Bar</a></li>
+                  <li><a href="404.html">Boghandel</a></li>
+                  <li><a href="404.html">Biografen</a></li>
                 </ul>
               </button>
             </li>
@@ -80,7 +86,7 @@
               <a href="shop.html">Årskort & Billetter</a>
             </li>
             <li class="menu-item lang hover-circle">
-              <a href="#">ENG/<span class="selected">DA</span></a>
+              <a href="index.html'">ENG/<span class="selected">DA</span></a>
             </li>
           </ul>
           <button
@@ -95,7 +101,7 @@
             <article class="burger-wrapper">
               <ul class="sub-menu">
                 <li class="burger-item smol hover-circle">
-                  <a href="#">Switch to english</a>
+                  <a href="index.html">Switch to english</a>
                 </li>
                 <li class="burger-item hover-circle">
                   <a href="udstillinger.html">Udstillinger</a>
@@ -104,7 +110,7 @@
                   class="burger-item hover-circle sub-burger-btn"
                   aria-expanded="false"
                 >
-                  <button href="#">
+                  <button>
                     Besøg kunsthallen
                     <svg
                       style="transform: rotate(180deg)"
@@ -128,11 +134,12 @@
                   <a href="events.html">Events</a>
                 </li>
                 <li class="burger-item hover-circle">
-                  <a href="nyheder.html">Nyheder</a>
+                  <a href="404.html">Nyheder</a>
                 </li>
                 <li class="burger-item hover-circle">
-                  <a href="kontakt.html">Kontakt Kunsthallen</a>
+                  <a href="404.html.html">Om Kunsthallen</a>
                 </li>
+                
               </ul>
               <article class="info">
                 <article class="opens">
@@ -315,17 +322,17 @@
 
                   <ul class="sub-menu">
                     <li class="burger-item hover-circle">
-                      <a href="#">Praktisk info</a>
+                      <a href="praktisk-info.html">Praktisk info</a>
                     </li>
 
                     <li class="burger-item hover-circle">
-                      <a href="#">Apollo Bar</a>
+                      <a href="404.html">Apollo Bar</a>
                     </li>
                     <li class="burger-item hover-circle">
-                      <a href="events.html">Boghandel</a>
+                      <a href="404.html">Boghandel</a>
                     </li>
                     <li class="burger-item hover-circle">
-                      <a href="#">Biograf</a>
+                      <a href="404.html">Biograf</a>
                     </li>
                   </ul>
                 </article>
@@ -340,7 +347,7 @@
         <section class="video-wrapper">
           <section class="video-hero">
             <video autoplay muted loop id="myVideo">
-              <source src="billeder/place-holder.mp4" type="video/mp4" />
+              <source src="billeder/vids_16-9_nographic.mp4" type="video/mp4" />
             </video>
           </section>
         </section>
