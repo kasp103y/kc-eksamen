@@ -1919,11 +1919,6 @@ footer input {
 
 @media screen and (min-width: 1230px) {
   /* Desktop styling goes here  */
-
-   {
-    margin-top: var(--spacing-8);
-  }
-
   .deskt-only {
     display: block;
   }
