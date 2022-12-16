@@ -1299,6 +1299,10 @@ video {
   z-index: 1;
 }
 
+.featured-ex h1 {
+  margin-bottom: var(--spacing-3);
+}
+
 .featured-ex.featured {
   padding-block: var(--spacing-4);
 }
