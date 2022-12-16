@@ -482,6 +482,7 @@ header {
   display: flex;
   justify-content: start;
   gap: var(--spacing-3);
+  margin-top: var(--spacing-5);
 }
 
 .so-me-links a svg {
@@ -619,9 +620,9 @@ footer {
   background-color: var(--dark-800);
 }
 
-.footer-nav article h3 {
-  margin-bottom: var(--spacing-3);
-  font-size: var(--font-size-lg);
+.footer-nav article .fourth-title {
+  margin-bottom: var(--spacing-5);
+  font-size: var(--font-size-base);
   margin-top: var(--spacing-6);
 }
 
@@ -645,7 +646,8 @@ footer {
 
 .footer-list li a,
 .footer-list li {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-base);
+  opacity: 65%;
 }
 
 .open-times li {
@@ -655,6 +657,10 @@ footer {
 
 .open-times li p {
   min-width: 150px;
+}
+
+ul.open-times li p:first-child {
+  opacity: 100%;
 }
 
 /*Footer over */
