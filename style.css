@@ -97,7 +97,7 @@ ul.white li a {
 
 body {
   background-color: var(--bg-color);
-  overflow-x: hidden; 
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -227,6 +227,7 @@ body.stop-scrolling {
   font-size: var(--font-size-md);
   font-family: var(--sans-serif);
   font-weight: var(--paragraph-weight);
+  line-height: 24px;
 }
 
 p {
@@ -351,7 +352,6 @@ header {
   left: 0;
   background-color: var(--primary-light);
   border-bottom: var(--border-thin-black);
-  
 }
 
 /* header.mix-blend {
@@ -1673,8 +1673,6 @@ footer input {
     opacity: 1;
   }
 
-
-
   .video-wrapper-var {
     grid-column: 6/13;
     grid-row: 2/3;
@@ -1856,8 +1854,6 @@ footer input {
   .burger .info {
     display: none;
   }
-
-
 }
 
 .prak-img {
