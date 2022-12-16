@@ -668,8 +668,8 @@ ul.open-times li p:first-child {
 /* Buttons */
 
 .btn-secondary-smol {
-  border: var(--border-thick-white);
-  padding: 10px 20px;
+  border: var(--border-thin-white);
+  padding: 20px 40px;
   border-radius: 999px;
   transition: var(--easing);
   font-weight: 400;
@@ -1724,8 +1724,13 @@ footer input {
 
   .second-title {
     font-size: var(--font-size-xxxl);
+    line-height: 100%;
   }
 
+  .form-text-wrapper p {
+    margin-top: var(--spacing-8);
+    opacity: 90%;
+  }
   .paragraph-title h3 {
     min-width: 100px;
   }
@@ -1883,6 +1888,11 @@ footer input {
 
   .deskt-only {
     display: block;
+  }
+
+  .tw-col-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
 
   .prak-grid .tw-col-grid {
