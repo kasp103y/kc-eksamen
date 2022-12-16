@@ -272,8 +272,9 @@ a.link {
 .h1-span {
   font-size: var(--font-size-base);
   font-family: var(--sans-serif);
-  font-weight: 500;
+  font-weight: 400;
   vertical-align: text-top;
+  opacity: 65%;
 }
 
 a {
@@ -1619,7 +1620,7 @@ footer input {
   /* Tablet styling goes here  */
 
   .hero-wrapper {
-    margin-top: var(--spacing-4);
+    margin-top: var(--spacing-8);
   }
 
   .menu-item.lang a {
